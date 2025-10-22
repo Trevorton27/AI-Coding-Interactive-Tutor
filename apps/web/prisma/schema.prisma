@@ -1,0 +1,128 @@
+// apps/web/prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Core curriculum structure
+model Concept {
+  id             String    @id @default(cuid())
+  name           String    @unique
+  description    String?
+  difficulty     Int       @default(1) // 1-5 scale
+  prerequisites  String[]  // Array of concept IDs
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  
+  tasks          Task[]
+  progress       Progress[]
+  
+  @@index([difficulty])
+}
+
+model Task {
+  id            String    @id @default(cuid())
+  title         String
+  description   String
+  prompt        String    @db.Text
+  difficulty    Int       @default(1)
+  
+  // Curriculum relationships
+  conceptIds    String[]  // Tags like ["html-basics", "dom-events"]
+  concepts      Concept[] @relation(fields: [conceptIds], references: [id])
+  prerequisites String[]  // Task IDs that must be completed first
+  
+  // Code scaffolding
+  scaffold      Json      // Record<string, string> - initial files
+  solution      Json      // Record<string, string> - complete solution
+  
+  // Testing
+  tests         Json      // Array of { id, code, successMsg, failureMsg }
+  
+  // Hints (three-tier system)
+  hints         Json      // Array of { level: 1|2|3, text: string }
+  
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  attempts      Attempt[]
+  
+  @@index([difficulty])
+}
+
+// Student progress tracking
+model Progress {
+  id            String    @id @default(cuid())
+  userId        String    // From auth provider (Clerk, NextAuth, etc.)
+  conceptId     String
+  concept       Concept   @relation(fields: [conceptId], references: [id], onDelete: Cascade)
+  
+  mastery       Int       @default(800) // Elo-style score: 600-1800
+  attempts      Int       @default(0)
+  successes     Int       @default(0)
+  lastAttemptAt DateTime?
+  
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  @@unique([userId, conceptId])
+  @@index([userId])
+  @@index([conceptId])
+}
+
+// Individual task attempts
+model Attempt {
+  id            String    @id @default(cuid())
+  userId        String
+  taskId        String
+  task          Task      @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  
+  code          Json      // Record<string, string> - submitted files
+  passed        Boolean
+  passedTests   String[]  // Test IDs that passed
+  failedTests   String[]  // Test IDs that failed
+  
+  hintsUsed     Int       @default(0)
+  maxHintLevel  Int       @default(0) // Highest hint level requested (1-3)
+  timeSpentMs   Int?      // Optional: track time on task
+  
+  createdAt     DateTime  @default(now())
+  
+  @@index([userId])
+  @@index([taskId])
+  @@index([createdAt])
+}
+
+// Chat history for fine-tuning
+model Dialog {
+  id            String    @id @default(cuid())
+  userId        String
+  taskId        String?   // Optional: may be general questions
+  
+  role          String    // "user" | "assistant" | "system"
+  content       String    @db.Text
+  hintLevel     Int?      // If assistant message was a hint
+  
+  createdAt     DateTime  @default(now())
+  
+  @@index([userId])
+  @@index([taskId])
+  @@index([createdAt])
+}
+
+// Optional: User profiles (if not using external auth)
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  @@index([email])
+}

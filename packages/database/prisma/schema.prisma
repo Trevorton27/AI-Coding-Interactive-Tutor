@@ -1,0 +1,106 @@
+// packages/database/prisma/schema.prisma
+// Same as apps/web/prisma/schema.prisma - centralized version
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Concept {
+  id             String    @id @default(cuid())
+  name           String    @unique
+  description    String?
+  difficulty     Int       @default(1)
+  prerequisites  String[]
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  
+  tasks          Task[]
+  progress       Progress[]
+  
+  @@index([difficulty])
+}
+
+model Task {
+  id            String    @id @default(cuid())
+  title         String
+  description   String
+  prompt        String    @db.Text
+  difficulty    Int       @default(1)
+  conceptIds    String[]
+  concepts      Concept[] @relation(fields: [conceptIds], references: [id])
+  prerequisites String[]
+  scaffold      Json
+  solution      Json
+  tests         Json
+  hints         Json
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  attempts      Attempt[]
+  
+  @@index([difficulty])
+}
+
+model Progress {
+  id            String    @id @default(cuid())
+  userId        String
+  conceptId     String
+  concept       Concept   @relation(fields: [conceptId], references: [id], onDelete: Cascade)
+  mastery       Int       @default(800)
+  attempts      Int       @default(0)
+  successes     Int       @default(0)
+  lastAttemptAt DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  @@unique([userId, conceptId])
+  @@index([userId])
+  @@index([conceptId])
+}
+
+model Attempt {
+  id            String    @id @default(cuid())
+  userId        String
+  taskId        String
+  task          Task      @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  code          Json
+  passed        Boolean
+  passedTests   String[]
+  failedTests   String[]
+  hintsUsed     Int       @default(0)
+  maxHintLevel  Int       @default(0)
+  timeSpentMs   Int?
+  createdAt     DateTime  @default(now())
+  
+  @@index([userId])
+  @@index([taskId])
+  @@index([createdAt])
+}
+
+model Dialog {
+  id            String    @id @default(cuid())
+  userId        String
+  taskId        String?
+  role          String
+  content       String    @db.Text
+  hintLevel     Int?
+  createdAt     DateTime  @default(now())
+  
+  @@index([userId])
+  @@index([taskId])
+  @@index([createdAt])
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  @@index([email])
+}
