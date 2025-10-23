@@ -7,12 +7,20 @@ export interface Task {
   description: string;
   prompt: string;
   difficulty: number;
-  conceptIds: string[];
+  concepts: TaskConcept[];
   prerequisites: string[];
   scaffold: Record<string, string>;
   solution: Record<string, string>;
   tests: Test[];
   hints: Hint[];
+}
+
+export interface TaskConcept {
+  concept: {
+    id: string;
+    name: string;
+    description?: string;
+  };
 }
 
 export interface Test {

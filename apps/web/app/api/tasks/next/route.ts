@@ -52,6 +52,19 @@ export async function POST(req: NextRequest) {
             lte: Math.min(5, targetDifficulty + 1)
           }
         },
+        include: {
+          concepts: {
+            include: {
+              concept: {
+                select: {
+                  id: true,
+                  name: true,
+                  description: true
+                }
+              }
+            }
+          }
+        },
         orderBy: [
           { difficulty: 'asc' }
         ]
@@ -69,6 +82,19 @@ export async function POST(req: NextRequest) {
       const nextTask = await prisma.task.findFirst({
         where: {
           id: { notIn: completedTaskIds }
+        },
+        include: {
+          concepts: {
+            include: {
+              concept: {
+                select: {
+                  id: true,
+                  name: true,
+                  description: true
+                }
+              }
+            }
+          }
         },
         orderBy: [
           { difficulty: 'asc' },
@@ -104,6 +130,19 @@ async function findAnyNextTask(completedTaskIds: string[]) {
   const nextTask = await prisma.task.findFirst({
     where: {
       id: { notIn: completedTaskIds }
+    },
+    include: {
+      concepts: {
+        include: {
+          concept: {
+            select: {
+              id: true,
+              name: true,
+              description: true
+            }
+          }
+        }
+      }
     },
     orderBy: { difficulty: 'asc' }
   });

@@ -7,7 +7,12 @@ interface TaskCardProps {
     title: string;
     description: string;
     difficulty: number;
-    conceptIds: string[];
+    concepts: Array<{
+      concept: {
+        id: string;
+        name: string;
+      };
+    }>;
   };
   completed?: boolean;
   locked?: boolean;
@@ -56,19 +61,19 @@ export function TaskCard({ task, completed = false, locked = false, onSelect }: 
       </p>
 
       {/* Concepts */}
-      {task.conceptIds.length > 0 && (
+      {task.concepts.length > 0 && (
         <div className="flex flex-wrap gap-1">
-          {task.conceptIds.slice(0, 3).map((conceptId) => (
+          {task.concepts.slice(0, 3).map((tc) => (
             <span
-              key={conceptId}
+              key={tc.concept.id}
               className="text-xs px-2 py-0.5 bg-gray-100 text-gray-600 rounded"
             >
-              {conceptId.split('-').pop()}
+              {tc.concept.name}
             </span>
           ))}
-          {task.conceptIds.length > 3 && (
+          {task.concepts.length > 3 && (
             <span className="text-xs px-2 py-0.5 bg-gray-100 text-gray-600 rounded">
-              +{task.conceptIds.length - 3}
+              +{task.concepts.length - 3}
             </span>
           )}
         </div>

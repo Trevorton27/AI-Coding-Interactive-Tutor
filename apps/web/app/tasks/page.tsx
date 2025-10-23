@@ -10,7 +10,12 @@ interface Task {
   title: string;
   description: string;
   difficulty: number;
-  conceptIds: string[];
+  concepts: Array<{
+    concept: {
+      id: string;
+      name: string;
+    };
+  }>;
   prerequisites: string[];
 }
 

@@ -31,21 +31,15 @@ This creates:
 
 ### 3. Install Dependencies
 
-Run the installation script to install npm packages in all directories:
-```bash
-chmod +x scripts/install-all.js
-node scripts/install-all.js
-```
-
-This will:
-- Find all package.json files in the project
-- Run `npm install` in each directory
-- Show a summary of successful/failed installations
-
-**Alternative:** Use pnpm from the root (recommended for monorepos):
+Install all dependencies using pnpm:
 ```bash
 pnpm install
 ```
+
+This will:
+- Install all dependencies for the monorepo
+- Link workspace packages automatically
+- Use the pnpm-lock.yaml for deterministic installs
 
 ### 4. Copy Artifact Code
 
@@ -89,25 +83,23 @@ createdb aict
 
 **Initialize schema:**
 ```bash
-cd apps/web
-npm run prisma generate  # Generate Prisma client
-npm run prisma db push   # Push schema to database
+pnpm db:generate  # Generate Prisma client
+pnpm db:push      # Push schema to database
 ```
 
 **Seed initial data:**
 ```bash
-npm run prisma db seed   # Seed 3 starter tasks
+pnpm db:seed     # Seed 3 starter tasks
 ```
 
 **Verify:**
 ```bash
-npm run prisma studio    # Opens Prisma Studio at localhost:5555
+pnpm db:studio   # Opens Prisma Studio at localhost:5555
 ```
 
 ### 7. Start Development Server
 ```bash
-cd apps/web
-npm run dev
+pnpm dev
 ```
 
 Visit **http://localhost:3000/learn**
@@ -135,31 +127,24 @@ aict/
 ### Add New Tasks
 ```bash
 # Edit apps/web/prisma/seed.ts or scripts/seed-tasks.ts
-cd apps/web
-npm run prisma db seed
+pnpm db:seed
 ```
 
 ### Reset Database
 ```bash
-cd apps/web
-npm run prisma migrate reset
+pnpm --filter @aict/web prisma migrate reset
 ```
 
 ### Type Checking
 ```bash
 # Check all packages
-cd apps/web
-npm run type-check
-
-# Or from root with pnpm
 pnpm type-check
 ```
 
 ### Build for Production
 ```bash
-cd apps/web
-npm run build
-npm start
+pnpm build
+pnpm start
 ```
 
 ### Clean Install (if issues occur)
@@ -167,12 +152,10 @@ npm start
 # Remove all node_modules
 find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
 
-# Remove lock files
-rm -f package-lock.json pnpm-lock.yaml
+# Remove lock file
+rm -f pnpm-lock.yaml
 
 # Reinstall everything
-node scripts/install-all.js
-# or
 pnpm install
 ```
 
@@ -180,31 +163,25 @@ pnpm install
 
 ## Troubleshooting
 
-### Installation Script Issues
+### Installation Issues
 
-**Script not executable:**
+**Installation fails:**
 ```bash
-chmod +x scripts/install-all.js
-chmod +x scripts/setup-project.sh
+# Try clean install
+pnpm install --force
 ```
-
-**Script finds 0 package.json files:**
-- Run `./scripts/setup-project.sh` first
-- Verify package.json files exist in root, apps/web, and packages/*
 
 **Installation fails in specific package:**
 ```bash
-# Install manually in that directory
-cd apps/web
-npm install
+# Install manually for that package
+pnpm --filter @aict/web install
 ```
 
 ### Monaco Editor Not Loading
 
 Install webpack plugin:
 ```bash
-cd apps/web
-npm install monaco-editor-webpack-plugin
+pnpm --filter @aict/web add monaco-editor-webpack-plugin
 ```
 
 Then update `next.config.js` (already included in artifacts).
@@ -224,12 +201,12 @@ createdb aict
 
 ### API Returns Errors
 
-Check server logs in terminal where `npm run dev` is running.
+Check server logs in terminal where `pnpm dev` is running.
 
 Common issues:
 - Missing `ANTHROPIC_API_KEY` in .env.local
-- Prisma client not generated: `npm run prisma generate`
-- JSDOM not installed: `npm install jsdom @types/jsdom`
+- Prisma client not generated: `pnpm db:generate`
+- JSDOM not installed: `pnpm --filter @aict/web add jsdom @types/jsdom`
 
 ### Tests Don't Run
 
@@ -250,11 +227,11 @@ curl -X POST http://localhost:3000/api/eval \
 
 If you have issues with workspace resolution:
 ```bash
-# Using npm (workspaces must be in package.json)
-npm install --workspaces
-
-# Using pnpm (recommended)
+# Reinstall with workspace linking
 pnpm install
+
+# Or rebuild workspace links
+pnpm install --force
 ```
 
 Ensure `pnpm-workspace.yaml` exists with:
@@ -272,8 +249,7 @@ packages:
 
 Edit `apps/web/prisma/seed.ts` and add new tasks, then:
 ```bash
-cd apps/web
-npm run prisma db seed
+pnpm db:seed
 ```
 
 ### Customize AI Behavior
@@ -282,8 +258,7 @@ Edit the system prompt in `apps/web/app/api/tutor/route.ts`
 
 ### View Database
 ```bash
-cd apps/web
-npm run prisma studio
+pnpm db:studio
 ```
 
 Opens Prisma Studio at http://localhost:5555
@@ -292,10 +267,9 @@ Opens Prisma Studio at http://localhost:5555
 
 Install Clerk or NextAuth:
 ```bash
-cd apps/web
-npm install @clerk/nextjs
+pnpm --filter @aict/web add @clerk/nextjs
 # or
-npm install next-auth
+pnpm --filter @aict/web add next-auth
 ```
 
 Follow their setup guides.
@@ -304,33 +278,27 @@ Follow their setup guides.
 
 ## Development Workflow
 ```bash
-# Create structure (first time only)
-./scripts/setup-project.sh
-
-# Install all dependencies
-node scripts/install-all.js
-# or
+# Install all dependencies (first time only)
 pnpm install
 
 # Start dev server with auto-reload
-cd apps/web
-npm run dev
+pnpm dev
 
 # Check types across all packages
-npm run type-check
+pnpm type-check
 
 # View database
-npm run prisma studio
+pnpm db:studio
 
 # Reset database (careful!)
-npm run prisma db push --force-reset
-npm run prisma db seed
+pnpm --filter @aict/web prisma db push --force-reset
+pnpm db:seed
 
 # Build for production
-npm run build
+pnpm build
 
 # Start production server
-npm start
+pnpm start
 ```
 
 ---
@@ -354,8 +322,7 @@ packages/services/
     └── types.ts          # Shared types
 
 scripts/
-├── setup-project.sh      # Create project structure
-└── install-all.js        # Install all npm dependencies
+└── seed-tasks.ts         # Advanced task seeding script
 ```
 
 ---
@@ -374,21 +341,20 @@ NEXTAUTH_URL=https://yourdomain.com
 
 ### Build Command
 ```bash
-cd apps/web && npm run build
+pnpm build
 ```
 
 ### Start Command
 ```bash
-cd apps/web && npm start
+pnpm start
 ```
 
 ### Database Migrations
 
 For production, use Prisma migrations instead of `db push`:
 ```bash
-cd apps/web
-npm run prisma migrate dev --name init
-npm run prisma migrate deploy  # In production
+pnpm --filter @aict/web prisma migrate dev --name init
+pnpm --filter @aict/web prisma migrate deploy  # In production
 ```
 
 ---
@@ -402,7 +368,7 @@ If stuck:
 3. Verify all environment variables are set
 4. Ensure database is seeded
 5. Try restarting dev server
-6. Run `node scripts/install-all.js` again
+6. Run `pnpm install` again
 
 ---
 
