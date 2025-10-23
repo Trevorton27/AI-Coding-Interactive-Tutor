@@ -50,7 +50,6 @@ lerna-debug.log*
 Thumbs.db
 
 # Git
-.git
 .gitignore
 
 # Documentation (optional - uncomment to exclude)
