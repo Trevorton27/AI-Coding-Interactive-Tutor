@@ -3,6 +3,10 @@ node_modules/
 .pnp
 .pnp.js
 
+# Lock files (use pnpm only)
+package-lock.json
+yarn.lock
+
 # Testing
 coverage/
 *.log
