@@ -1,6 +1,6 @@
 // apps/web/app/lib/task-loader.ts
 
-import type { Task } from '@aict/services/src/types';
+import type { Task } from '@aict/services/types';
 
 /**
  * Client-side utilities for loading tasks

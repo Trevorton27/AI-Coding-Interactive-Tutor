@@ -19,7 +19,7 @@ model Concept {
   createdAt      DateTime  @default(now())
   updatedAt      DateTime  @updatedAt
   
-  tasks          Task[]
+  tasks          ConceptTask[]
   progress       Progress[]
   
   @@index([difficulty])
@@ -33,8 +33,7 @@ model Task {
   difficulty    Int       @default(1)
   
   // Curriculum relationships
-  conceptIds    String[]  // Tags like ["html-basics", "dom-events"]
-  concepts      Concept[] @relation(fields: [conceptIds], references: [id])
+  concepts      ConceptTask[]
   prerequisites String[]  // Task IDs that must be completed first
   
   // Code scaffolding
@@ -53,6 +52,18 @@ model Task {
   attempts      Attempt[]
   
   @@index([difficulty])
+}
+
+// Join table for many-to-many relationship between Concept and Task
+model ConceptTask {
+  concept    Concept  @relation(fields: [conceptId], references: [id], onDelete: Cascade)
+  conceptId  String
+  task       Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  taskId     String
+
+  @@id([conceptId, taskId])
+  @@index([conceptId])
+  @@index([taskId])
 }
 
 // Student progress tracking

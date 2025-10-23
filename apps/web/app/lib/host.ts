@@ -1,5 +1,5 @@
 // apps/web/app/lib/host.ts
-import type { HostCapabilities } from "@aict/services/src/orchestrator";
+import type { HostCapabilities } from "@aict/services/orchestrator";
 
 export interface HostOptions {
   // Task management

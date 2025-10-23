@@ -2,8 +2,8 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { isTutorResponse, runActions, type UIMessage } from "@aict/services/src/orchestrator";
-import type { HostCapabilities } from "@aict/services/src/orchestrator";
+import { isTutorResponse, runActions, type UIMessage } from "@aict/services/orchestrator";
+import type { HostCapabilities } from "@aict/services/orchestrator";
 
 type ChatMessage = UIMessage & { id: string };
 
@@ -76,7 +76,7 @@ export function ChatPanel({ host, contextBuilder, onTestResult }: ChatPanelProps
 
       // 7) Show hint indicator if present
       if (modelJson.hint) {
-        const hintEmoji = { 1: "🟡", 2: "🟠", 3: "🔴" }[modelJson.hint.level] || "💡";
+        const hintEmoji = { 1: "🟡", 2: "🟠", 3: "🔴" }[modelJson.hint.level as 1 | 2 | 3] || "💡";
         appendMessage({
           type: "system",
           text: `${hintEmoji} Hint level ${modelJson.hint.level} provided`

@@ -33,11 +33,11 @@ export async function POST(req: NextRequest) {
       distinct: ['taskId']
     });
 
-    const completedTaskIds = completedAttempts.map(a => a.taskId);
+    const completedTaskIds = completedAttempts.map((a: any) => a.taskId);
 
     // Calculate average mastery
     const avgMastery = userProgress.length > 0
-      ? userProgress.reduce((sum, p) => sum + p.mastery, 0) / userProgress.length
+      ? userProgress.reduce((sum: number, p: any) => sum + p.mastery, 0) / userProgress.length
       : 800;
 
     if (strategy === "just-right") {

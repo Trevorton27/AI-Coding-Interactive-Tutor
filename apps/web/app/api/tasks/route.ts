@@ -19,8 +19,10 @@ export async function GET(req: NextRequest) {
     }
     
     if (conceptId) {
-      where.conceptIds = {
-        has: conceptId
+      where.concepts = {
+        some: {
+          conceptId: conceptId
+        }
       };
     }
 
@@ -31,8 +33,17 @@ export async function GET(req: NextRequest) {
         title: true,
         description: true,
         difficulty: true,
-        conceptIds: true,
-        prerequisites: true
+        prerequisites: true,
+        concepts: {
+          include: {
+            concept: {
+              select: {
+                id: true,
+                name: true
+              }
+            }
+          }
+        }
       },
       orderBy: {
         difficulty: 'asc'

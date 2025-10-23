@@ -1,24 +1,25 @@
 // scripts/seed-tasks.ts
 // Advanced seeding script for adding more tasks
 
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient, Prisma } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
 async function seedAdvancedTasks() {
   console.log('🌱 Seeding advanced tasks...');
 
-  // Get existing concepts
-  const htmlBasics = await prisma.concept.findUnique({ where: { name: 'html-basics' } });
-  const cssBasics = await prisma.concept.findUnique({ where: { name: 'css-basics' } });
-  const jsBasics = await prisma.concept.findUnique({ where: { name: 'js-basics' } });
+  // Lookup base concepts by unique "name"
+  const [htmlBasics, cssBasics, jsBasics] = await Promise.all([
+    prisma.concept.findUnique({ where: { name: 'html-basics' } }),
+    prisma.concept.findUnique({ where: { name: 'css-basics' } }),
+    prisma.concept.findUnique({ where: { name: 'js-basics' } }),
+  ]);
 
   if (!htmlBasics || !cssBasics || !jsBasics) {
     console.error('❌ Base concepts not found. Run main seed first.');
     process.exit(1);
   }
 
-  // Advanced HTML task
   await prisma.task.upsert({
     where: { id: 'html-lists-1' },
     update: {},
@@ -26,10 +27,22 @@ async function seedAdvancedTasks() {
       id: 'html-lists-1',
       title: 'Create a Todo List Structure',
       description: 'Build an unordered list with at least 3 todo items',
-      prompt: 'Create an HTML page with a heading "My Todos" and an unordered list with 3 todo items.',
+      prompt:
+        'Create an HTML page with a heading "My Todos" and an unordered list with 3 todo items.',
       difficulty: 2,
-      conceptIds: [htmlBasics.id],
+
+      // String[] column
       prerequisites: ['html-basics-1'],
+
+      // Use the explicit join model via nested write
+      concepts: {
+        // either direct FK…
+        // create: [{ conceptId: htmlBasics.id }],
+        // …or connect through the related model:
+        create: [{ concept: { connect: { id: htmlBasics.id } } }],
+      },
+
+      // JSON columns — type-safe inputs
       scaffold: {
         'index.html': `<!DOCTYPE html>
 <html>
@@ -41,8 +54,9 @@ async function seedAdvancedTasks() {
   <h1>My Todos</h1>
   <!-- Add your list here -->
 </body>
-</html>`
-      },
+</html>`,
+      } as Prisma.InputJsonObject,
+
       solution: {
         'index.html': `<!DOCTYPE html>
 <html>
@@ -58,37 +72,30 @@ async function seedAdvancedTasks() {
     <li>Build projects</li>
   </ul>
 </body>
-</html>`
-      },
+</html>`,
+      } as Prisma.InputJsonObject,
+
       tests: [
         {
           id: 'has-ul',
           code: 'document.querySelector("ul") !== null',
-          successMessage: 'Great! You added an unordered list.',
-          failureMessage: 'Add a <ul> element for your list.'
+          successMsg: 'Great! You added an unordered list.',
+          failureMsg: 'Add a <ul> element for your list.',
         },
         {
           id: 'has-three-items',
           code: 'document.querySelectorAll("li").length >= 3',
-          successMessage: 'Perfect! You have at least 3 list items.',
-          failureMessage: 'Add at least 3 <li> elements inside your <ul>.'
-        }
-      ],
+          successMsg: 'Perfect! You have at least 3 list items.',
+          failureMsg: 'Add at least 3 <li> elements inside your <ul>.',
+        },
+      ] as Prisma.InputJsonValue,
+
       hints: [
-        {
-          level: 1,
-          text: 'HTML lists use <ul> for unordered lists and <li> for each item.'
-        },
-        {
-          level: 2,
-          text: 'Wrap multiple <li> elements inside a <ul> tag.'
-        },
-        {
-          level: 3,
-          text: '<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>'
-        }
-      ]
-    }
+        { level: 1, text: 'HTML lists use <ul> for unordered lists and <li> for each item.' },
+        { level: 2, text: 'Wrap multiple <li> elements inside a <ul> tag.' },
+        { level: 3, text: '<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>' },
+      ] as Prisma.InputJsonValue,
+    },
   });
 
   console.log('✅ Advanced tasks seeded');

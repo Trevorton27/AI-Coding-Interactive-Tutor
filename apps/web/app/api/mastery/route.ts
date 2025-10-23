@@ -145,7 +145,7 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json({
       userId,
-      progress: progress.map(p => ({
+      progress: progress.map((p: any) => ({
         concept: p.concept.name,
         description: p.concept.description,
         difficulty: p.concept.difficulty,

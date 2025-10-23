@@ -7,7 +7,7 @@ import { CodeEditor } from "../components/CodeEditor";
 import { PreviewSandbox } from "../components/PreviewSandbox";
 import { TestPanel } from "../components/TestPanel";
 import { makeHostCapabilities } from "../lib/host";
-import type { HostCapabilities } from "@aict/services/src/orchestrator";
+import type { HostCapabilities } from "@aict/services/orchestrator";
 
 // Mock task structure - replace with real data loading
 interface Task {

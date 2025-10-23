@@ -1,6 +1,6 @@
 // apps/web/app/lib/test-runner.ts
 
-import type { TestResult } from '@aict/services/src/types';
+import type { TestResult } from '@aict/services/types';
 
 /**
  * Client-side test execution utilities
@@ -96,7 +96,7 @@ export function analyzeTestFailures(
   const conceptTags: string[] = [];
   
   // Map failed test IDs to concept tags
-  result.failedIds.forEach(testId => {
+  result.failedIds.forEach((testId: string) => {
     const test = task.tests?.find((t: any) => t.id === testId);
     if (test?.conceptTag) {
       conceptTags.push(test.conceptTag);

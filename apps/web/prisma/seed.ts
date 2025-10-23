@@ -75,8 +75,12 @@ async function main() {
       description: 'Build a simple HTML page with a heading and paragraph',
       prompt: 'Create an HTML page that displays a heading saying "Hello World" and a paragraph introducing yourself.',
       difficulty: 1,
-      conceptIds: [htmlBasics.id],
       prerequisites: [],
+      concepts: {
+        create: [
+          { conceptId: htmlBasics.id }
+        ]
+      },
       scaffold: {
         'index.html': `<!DOCTYPE html>
 <html>
@@ -148,8 +152,12 @@ async function main() {
       description: 'Add colors and fonts to your webpage',
       prompt: 'Style your heading with a blue color and your paragraph with a larger font size.',
       difficulty: 1,
-      conceptIds: [cssBasics.id],
       prerequisites: ['html-basics-1'],
+      concepts: {
+        create: [
+          { conceptId: cssBasics.id }
+        ]
+      },
       scaffold: {
         'index.html': `<!DOCTYPE html>
 <html>
@@ -227,8 +235,14 @@ p {
       description: 'Count button clicks and display the number',
       prompt: 'Create a button that counts how many times it has been clicked and displays the count.',
       difficulty: 2,
-      conceptIds: [jsBasics.id, domManipulation.id, events.id],
       prerequisites: ['html-basics-1'],
+      concepts: {
+        create: [
+          { conceptId: jsBasics.id },
+          { conceptId: domManipulation.id },
+          { conceptId: events.id }
+        ]
+      },
       scaffold: {
         'index.html': `<!DOCTYPE html>
 <html>

@@ -8,19 +8,23 @@ const prisma = new PrismaClient();
 // GET /api/tasks/[id] - Get specific task with full details
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
 
     const task = await prisma.task.findUnique({
       where: { id },
       include: {
         concepts: {
-          select: {
-            name: true,
-            description: true,
-            difficulty: true
+          include: {
+            concept: {
+              select: {
+                name: true,
+                description: true,
+                difficulty: true
+              }
+            }
           }
         }
       }
