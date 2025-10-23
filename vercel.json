@@ -1,15 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "pnpm --filter @aict/web prisma generate && pnpm --filter @aict/web build",
+  "buildCommand": "cd apps/web && pnpm exec prisma generate && cd ../.. && pnpm --filter @aict/web build",
   "installCommand": "pnpm install --no-frozen-lockfile",
   "framework": "nextjs",
   "outputDirectory": "apps/web/.next",
-  "build": {
-    "env": {
-      "PRISMA_GENERATE_SKIP_AUTOINSTALL": "true",
-      "NODE_ENV": "production"
-    }
-  },
   "functions": {
     "apps/web/app/api/**/*.ts": {
       "memory": 1024,
