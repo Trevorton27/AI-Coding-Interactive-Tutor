@@ -5,13 +5,6 @@
   "framework": "nextjs",
   "outputDirectory": "apps/web/.next",
   "ignoreCommand": "git diff --quiet HEAD^ HEAD ./apps/web ./packages",
-  "env": {
-    "ANTHROPIC_API_KEY": "@anthropic_api_key",
-    "DATABASE_URL": "@database_url",
-    "NEXTAUTH_SECRET": "@nextauth_secret",
-    "NEXTAUTH_URL": "@nextauth_url",
-    "NEXT_PUBLIC_APP_URL": "@app_url"
-  },
   "build": {
     "env": {
       "PRISMA_GENERATE_SKIP_AUTOINSTALL": "true",
