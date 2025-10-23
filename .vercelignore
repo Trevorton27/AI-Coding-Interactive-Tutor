@@ -32,9 +32,6 @@ lerna-debug.log*
 .env.test.local
 .env.production.local
 
-# Vercel
-.vercel
-
 # TypeScript
 *.tsbuildinfo
 
@@ -50,11 +47,11 @@ lerna-debug.log*
 Thumbs.db
 
 # Git
-.gitignore
+# .gitignore  ← un-ignore this file!
 
-# Documentation (optional - uncomment to exclude)
+# Documentation (optional)
 # docs/
 # README.md
 
-# Scripts (optional - uncomment if not needed in production)
+# Scripts (optional)
 # scripts/
