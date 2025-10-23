@@ -4,7 +4,6 @@
   "installCommand": "pnpm install",
   "framework": "nextjs",
   "outputDirectory": "apps/web/.next",
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./apps/web ./packages",
   "build": {
     "env": {
       "PRISMA_GENERATE_SKIP_AUTOINSTALL": "true",
