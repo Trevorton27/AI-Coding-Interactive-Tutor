@@ -3,9 +3,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Ensure App Router is enabled
-  experimental: {
-    runtime: 'edge',
-  },
+  experimental: {},
 
   // Monaco Editor webpack configuration
   webpack: (config, { isServer }) => {
