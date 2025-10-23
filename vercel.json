@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "ls -la && pwd && pnpm exec prisma generate && pnpm --filter @aict/web build",
+  "buildCommand": "pnpm exec prisma generate && pnpm run build",
   "installCommand": "pnpm install --no-frozen-lockfile",
   "framework": "nextjs",
   "outputDirectory": "apps/web/.next",
