@@ -137,3 +137,90 @@ model User {
   
   @@index([email])
 }
+// -------- Agent & Orchestration --------
+model Agent {
+  id            String   @id @default(cuid())
+  name          String   @unique
+  version       String
+  systemPrompt  String
+  tools         Json
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Conversation {
+  id            String   @id @default(cuid())
+  agentId       String?
+  agentVersion  String?
+  studentId     String
+  courseId      String
+  createdAt     DateTime @default(now())
+  messages      Message[]
+  @@index([studentId, courseId])
+}
+
+model Message {
+  id             String   @id @default(cuid())
+  conversationId String
+  role           String   // system | user | assistant | tool | summary
+  text           String   @db.Text
+  tokens         Int?
+  toolCalls      Json?
+  language       String?
+  createdAt      DateTime @default(now())
+  feedback       Feedback?
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  @@index([conversationId])
+}
+
+// -------- Long-term memory & knowledge --------
+model Memory {
+  id         String   @id @default(cuid())
+  studentId  String
+  courseId   String
+  text       String   @db.Text
+  source     String
+  lastUsedAt DateTime @default(now())
+  embedding  Bytes?   // upgrade to pgvector later
+  @@index([studentId, courseId])
+}
+
+model KnowledgeDoc {
+  id        String   @id @default(cuid())
+  courseId  String
+  lessonId  String?
+  uri       String?
+  text      String   @db.Text
+  meta      Json?
+  embedding Bytes?   // upgrade to pgvector later
+  @@index([courseId])
+}
+
+// -------- Feedback & evals --------
+model Feedback {
+  id         String   @id @default(cuid())
+  messageId  String   @unique
+  rating     Int      // -1 | 0 | 1
+  tags       String[]
+  comment    String?
+  createdAt  DateTime @default(now())
+  message    Message  @relation(fields: [messageId], references: [id], onDelete: Cascade)
+}
+
+model EvalSample {
+  id         String   @id @default(cuid())
+  input      String   @db.Text
+  golden     String   @db.Text
+  rubricId   String?
+  createdAt  DateTime @default(now())
+}
+
+model EvalResult {
+  id          String   @id @default(cuid())
+  agentId     String
+  agentVer    String
+  sampleId    String
+  score       Float
+  metrics     Json
+  createdAt   DateTime @default(now())
+}
