@@ -1,61 +1,64 @@
-// apps/web/app/api/tasks/route.ts
+import { NextResponse } from "next/server";
+import { promises as fs } from "fs";
+import path from "path";
 
-import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
+export const dynamic = "force-dynamic"; // avoid caching during dev
 
-const prisma = new PrismaClient();
+const SRC = process.env.TASKS_SOURCE || "local"; // local | db
 
-// GET /api/tasks - List all tasks with optional filtering
-export async function GET(req: NextRequest) {
+async function readJsonFlexible() {
+  const cwd = process.cwd(); // when running inside apps/web, this IS apps/web
+  const candidates = [
+    path.join(cwd, "data/tasks.levels.json"),          // when cwd === apps/web
+    path.join(cwd, "apps/web/data/tasks.levels.json"), // when cwd === repo root
+  ];
+
+  for (const p of candidates) {
+    try {
+      const raw = await fs.readFile(p, "utf-8");
+      return JSON.parse(raw) as any[];
+    } catch (_) {
+      // try next
+    }
+  }
+  throw new Error(
+    `tasks.levels.json not found. Looked in:\n${candidates.join("\n")}`
+  );
+}
+
+async function loadLocal(level?: number) {
+  const all = await readJsonFlexible();
+  return typeof level === "number" ? all.filter(t => t.difficulty === level) : all;
+}
+
+async function loadDb(level?: number) {
+  const { PrismaClient } = await import("@prisma/client");
+  const prisma = new PrismaClient();
+  try {
+    const where = level ? { difficulty: level } : {};
+    return await prisma.task.findMany({ where, orderBy: { id: "asc" } });
+  } finally {
+    await prisma.$disconnect();
+  }
+}
+
+export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(req.url);
-    const difficulty = searchParams.get("difficulty");
-    const conceptId = searchParams.get("conceptId");
+    const levelParam = searchParams.get("level");
+    const level = levelParam ? parseInt(levelParam) : undefined;
+    const limit = parseInt(searchParams.get("limit") || "15");
+    const offset = parseInt(searchParams.get("offset") || "0");
 
-    const where: any = {};
-    
-    if (difficulty) {
-      where.difficulty = parseInt(difficulty);
-    }
-    
-    if (conceptId) {
-      where.concepts = {
-        some: {
-          conceptId: conceptId
-        }
-      };
-    }
+    const rows = (process.env.TASKS_SOURCE || "local") === "db"
+      ? await loadDb(level)
+      : await loadLocal(level);
 
-    const tasks = await prisma.task.findMany({
-      where,
-      select: {
-        id: true,
-        title: true,
-        description: true,
-        difficulty: true,
-        prerequisites: true,
-        concepts: {
-          include: {
-            concept: {
-              select: {
-                id: true,
-                name: true
-              }
-            }
-          }
-        }
-      },
-      orderBy: {
-        difficulty: 'asc'
-      }
-    });
-
-    return NextResponse.json({ tasks });
-
-  } catch (error) {
-    console.error("Tasks API error:", error);
+    const items = rows.slice(offset, offset + limit);
+    return NextResponse.json({ items, total: rows.length });
+  } catch (err: any) {
     return NextResponse.json(
-      { error: "Failed to fetch tasks" },
+      { error: err?.message || String(err) },
       { status: 500 }
     );
   }

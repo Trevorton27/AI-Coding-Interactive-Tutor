@@ -7,18 +7,28 @@ interface SolutionModalProps {
   isOpen: boolean;
   onClose: () => void;
   solution: Record<string, string>;
-  onReveal: () => void;
+  onReveal?: () => void;
+  onApplySolution?: (files: Record<string, string>) => void;
 }
 
-export function SolutionModal({ isOpen, onClose, solution, onReveal }: SolutionModalProps) {
+export function SolutionModal({ isOpen, onClose, solution, onReveal, onApplySolution }: SolutionModalProps) {
   const [confirmed, setConfirmed] = useState(false);
   const [revealed, setRevealed] = useState(false);
+  const [showApplyConfirm, setShowApplyConfirm] = useState(false);
 
   if (!isOpen) return null;
 
   const handleReveal = () => {
     setRevealed(true);
-    onReveal();
+    onReveal?.();
+  };
+
+  const handleApply = () => {
+    if (onApplySolution) {
+      onApplySolution(solution);
+      setShowApplyConfirm(false);
+      onClose();
+    }
   };
 
   return (
@@ -108,21 +118,60 @@ export function SolutionModal({ isOpen, onClose, solution, onReveal }: SolutionM
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-4 border-t border-gray-200 flex justify-end gap-3">
-          <button
-            onClick={onClose}
-            className="px-4 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200"
-          >
-            {revealed ? 'Close' : 'Cancel'}
-          </button>
-          {!revealed && (
-            <button
-              onClick={handleReveal}
-              disabled={!confirmed}
-              className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
-            >
-              Reveal Solution
-            </button>
+        <div className="px-6 py-4 border-t border-gray-200">
+          {showApplyConfirm ? (
+            <div className="space-y-3">
+              <div className="flex items-center gap-2 text-amber-600">
+                <span className="text-xl">⚠️</span>
+                <span className="text-sm font-medium">
+                  This will replace all your current code with the solution. Are you sure?
+                </span>
+              </div>
+              <div className="flex justify-end gap-3">
+                <button
+                  onClick={() => setShowApplyConfirm(false)}
+                  className="px-4 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={handleApply}
+                  className="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700"
+                >
+                  Yes, Replace My Code
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="flex justify-between items-center">
+              <div>
+                {revealed && onApplySolution && (
+                  <button
+                    onClick={() => setShowApplyConfirm(true)}
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                  >
+                    Apply Solution to Editor
+                  </button>
+                )}
+              </div>
+              <div className="flex gap-3">
+                <button
+                  onClick={onClose}
+                  className="px-4 py-2 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200"
+                >
+                  {revealed ? 'Close' : 'Cancel'}
+                </button>
+                {!revealed && (
+                  <button
+                    onClick={handleReveal}
+                    disabled={!confirmed}
+                    className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
+                  >
+                    Reveal Solution
+                  </button>
+                )}
+              </div>
+            </div>
           )}
         </div>
       </div>
