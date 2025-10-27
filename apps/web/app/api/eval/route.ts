@@ -33,10 +33,14 @@ export async function POST(req: NextRequest) {
       passed: true,
       passedIds: [] as string[],
       failedIds: [] as string[],
-      messages: {} as Record<string, string>
+      messages: {} as Record<string, string>,
+      testLabels: {} as Record<string, string>
     };
 
     for (const test of task.tests || []) {
+      // Store test label for UI display
+      results.testLabels[test.id] = test.label || test.id;
+
       try {
         // Evaluate test code in the context of the document
         const testFn = new Function("document", "window", `return ${test.code}`);
@@ -69,7 +73,8 @@ export async function POST(req: NextRequest) {
         passed: false,
         passedIds: [],
         failedIds: [],
-        messages: { "error": "Failed to run tests" }
+        messages: { "error": "Failed to run tests" },
+        testLabels: {}
       },
       { status: 500 }
     );

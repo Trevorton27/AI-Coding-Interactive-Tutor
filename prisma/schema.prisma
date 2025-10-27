@@ -1,0 +1,27 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Task {
+  id          String   @id
+  title       String
+  description String
+  difficulty  Int
+  category    String?
+  scaffold    Json
+  tests       Json
+  createdAt   DateTime @default(now())
+}
+
+model TaskProgress {
+  id          String   @id @default(cuid())
+  studentId   String
+  taskId      String
+  passed      Boolean  @default(false)
+  attempts    Int      @default(0)
+  updatedAt   DateTime @updatedAt
+}

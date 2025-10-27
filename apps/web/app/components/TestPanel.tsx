@@ -6,6 +6,7 @@ interface TestResult {
   passedIds: string[];
   failedIds: string[];
   messages: Record<string, string>;
+  testLabels?: Record<string, string>;
 }
 
 interface TestPanelProps {
@@ -80,6 +81,7 @@ export function TestPanel({ result, onRunTests, isRunning }: TestPanelProps) {
         {allTestIds.map(testId => {
           const passed = result.passedIds.includes(testId);
           const message = result.messages[testId];
+          const label = result.testLabels?.[testId] || testId;
 
           return (
             <div
@@ -94,7 +96,7 @@ export function TestPanel({ result, onRunTests, isRunning }: TestPanelProps) {
                 <span className="text-lg">{passed ? "✅" : "❌"}</span>
                 <div className="flex-1 min-w-0">
                   <p className="font-medium text-gray-900 text-sm">
-                    {testId}
+                    {label}
                   </p>
                   {message && (
                     <p
