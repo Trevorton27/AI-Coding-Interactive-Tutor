@@ -1,5 +1,4 @@
-// packages/database/prisma/schema.prisma
-// Same as apps/web/prisma/schema.prisma - centralized version
+// apps/web/prisma/schema.prisma
 
 generator client {
   provider = "prisma-client-js"
@@ -10,16 +9,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// Core curriculum structure
 model Concept {
   id             String    @id @default(cuid())
   name           String    @unique
   description    String?
-  difficulty     Int       @default(1)
-  prerequisites  String[]
+  difficulty     Int       @default(1) // 1-5 scale
+  prerequisites  String[]  // Array of concept IDs
   createdAt      DateTime  @default(now())
   updatedAt      DateTime  @updatedAt
   
-  tasks          Task[]
+  tasks          ConceptTask[]
   progress       Progress[]
   
   @@index([difficulty])
@@ -31,29 +31,58 @@ model Task {
   description   String
   prompt        String    @db.Text
   difficulty    Int       @default(1)
-  conceptIds    String[]
-  concepts      Concept[] @relation(fields: [conceptIds], references: [id])
-  prerequisites String[]
-  scaffold      Json
-  solution      Json
-  tests         Json
-  hints         Json
+
+  // Curriculum relationships
+  concepts      ConceptTask[]
+  prerequisites String[]  // Task IDs that must be completed first
+
+  // Code scaffolding
+  scaffold      Json      // Record<string, string> - initial files
+  solution      Json      // Record<string, string> - complete solution
+
+  // Testing
+  tests         Json      // Array of { id, code, label, successMsg, failureMsg }
+
+  // Hints (three-tier system)
+  hints         Json      // Array of { level: 1|2|3, text: string }
+
+  // Enhanced educational content
+  detailedDescription String?    @db.Text  // Rich, conversational description
+  realWorldContext    String?    @db.Text  // Why this matters in real dev work
+  alternativeSolutions Json?                // Array of alternative solution approaches
+
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
+
   attempts      Attempt[]
-  
+
   @@index([difficulty])
 }
 
+// Join table for many-to-many relationship between Concept and Task
+model ConceptTask {
+  concept    Concept  @relation(fields: [conceptId], references: [id], onDelete: Cascade)
+  conceptId  String
+  task       Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  taskId     String
+
+  @@id([conceptId, taskId])
+  @@index([conceptId])
+  @@index([taskId])
+}
+
+// Student progress tracking
 model Progress {
   id            String    @id @default(cuid())
-  userId        String
+  userId        String    // From auth provider (Clerk, NextAuth, etc.)
   conceptId     String
   concept       Concept   @relation(fields: [conceptId], references: [id], onDelete: Cascade)
-  mastery       Int       @default(800)
+  
+  mastery       Int       @default(800) // Elo-style score: 600-1800
   attempts      Int       @default(0)
   successes     Int       @default(0)
   lastAttemptAt DateTime?
+  
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
   
@@ -62,18 +91,22 @@ model Progress {
   @@index([conceptId])
 }
 
+// Individual task attempts
 model Attempt {
   id            String    @id @default(cuid())
   userId        String
   taskId        String
   task          Task      @relation(fields: [taskId], references: [id], onDelete: Cascade)
-  code          Json
+  
+  code          Json      // Record<string, string> - submitted files
   passed        Boolean
-  passedTests   String[]
-  failedTests   String[]
+  passedTests   String[]  // Test IDs that passed
+  failedTests   String[]  // Test IDs that failed
+  
   hintsUsed     Int       @default(0)
-  maxHintLevel  Int       @default(0)
-  timeSpentMs   Int?
+  maxHintLevel  Int       @default(0) // Highest hint level requested (1-3)
+  timeSpentMs   Int?      // Optional: track time on task
+  
   createdAt     DateTime  @default(now())
   
   @@index([userId])
@@ -81,13 +114,16 @@ model Attempt {
   @@index([createdAt])
 }
 
+// Chat history for fine-tuning
 model Dialog {
   id            String    @id @default(cuid())
   userId        String
-  taskId        String?
-  role          String
+  taskId        String?   // Optional: may be general questions
+  
+  role          String    // "user" | "assistant" | "system"
   content       String    @db.Text
-  hintLevel     Int?
+  hintLevel     Int?      // If assistant message was a hint
+  
   createdAt     DateTime  @default(now())
   
   @@index([userId])
@@ -95,10 +131,12 @@ model Dialog {
   @@index([createdAt])
 }
 
+// Optional: User profiles (if not using external auth)
 model User {
   id            String    @id @default(cuid())
   email         String    @unique
   name          String?
+  
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
   
@@ -190,4 +228,42 @@ model EvalResult {
   score       Float
   metrics     Json
   createdAt   DateTime @default(now())
+}
+
+// -------- Challenges Module --------
+model Challenge {
+  id           String   @id @default(cuid())
+  level        Int
+  slug         String   @unique
+  title        String
+  objective    String
+  passCriteria String
+  starter      Json     // { html?:string, css?:string, js?:string }
+  tests        Json     // array of test definitions interpreted by /api/eval
+  tags         String[]
+  paramsSchema Json?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  solutions    ChallengeSolution[]
+  hintTemplates ChallengeHintTemplate[]
+}
+
+model ChallengeSolution {
+  id          String   @id @default(cuid())
+  challengeId String
+  label       String
+  files       Json     // { html?:string, css?:string, js?:string }
+  notes       String?
+  createdAt   DateTime @default(now())
+  challenge   Challenge @relation(fields: [challengeId], references: [id], onDelete: Cascade)
+}
+
+model ChallengeHintTemplate {
+  id          String   @id @default(cuid())
+  challengeId String
+  level       Int      // 1..3
+  text        String
+  createdAt   DateTime @default(now())
+  challenge   Challenge @relation(fields: [challengeId], references: [id], onDelete: Cascade)
 }

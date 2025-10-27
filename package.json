@@ -14,7 +14,9 @@
     "db:seed": "pnpm --filter @aict/web prisma db seed",
     "db:studio": "pnpm --filter @aict/web prisma studio",
     "clean": "pnpm -r exec rm -rf node_modules .next dist",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "gen:challenges": "tsx scripts/generate-challenges.ts",
+    "seed:challenges": "tsx scripts/seed-challenges.ts"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",

@@ -1,0 +1,46 @@
+{
+  "level": 1,
+  "slug": "l1-18-form-inputs",
+  "title": "Form Inputs",
+  "objective": "HTML: Form Inputs",
+  "passCriteria": "Required HTML structure exists.",
+  "starter": {
+    "html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>"
+  },
+  "tests": [
+    {
+      "id": "inputs",
+      "type": "dom-assert",
+      "selector": "input[type=text]"
+    }
+  ],
+  "tags": [
+    "html"
+  ],
+  "solutions": [
+    {
+      "label": "Minimal solution",
+      "files": {
+        "html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+        "css": "",
+        "js": ""
+      },
+      "notes": "One of several correct answers."
+    }
+  ],
+  "hints": [
+    {
+      "level": 1,
+      "text": "まず、要素やAPIの『名前』に注目して、足りないものを洗い出しましょう。"
+    },
+    {
+      "level": 2,
+      "text": "合否条件を満たすための最小構成を列挙してから、1つずつ追加しましょう。"
+    },
+    {
+      "level": 3,
+      "text": "具体的なタグ名/メソッド名を確認して、対応する属性や引数を補ってください。"
+    }
+  ],
+  "paramsSchema": {}
+}

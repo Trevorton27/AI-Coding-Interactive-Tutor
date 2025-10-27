@@ -31,26 +31,31 @@ model Task {
   description   String
   prompt        String    @db.Text
   difficulty    Int       @default(1)
-  
+
   // Curriculum relationships
   concepts      ConceptTask[]
   prerequisites String[]  // Task IDs that must be completed first
-  
+
   // Code scaffolding
   scaffold      Json      // Record<string, string> - initial files
   solution      Json      // Record<string, string> - complete solution
-  
+
   // Testing
-  tests         Json      // Array of { id, code, successMsg, failureMsg }
-  
+  tests         Json      // Array of { id, code, label, successMsg, failureMsg }
+
   // Hints (three-tier system)
   hints         Json      // Array of { level: 1|2|3, text: string }
-  
+
+  // Enhanced educational content
+  detailedDescription String?    @db.Text  // Rich, conversational description
+  realWorldContext    String?    @db.Text  // Why this matters in real dev work
+  alternativeSolutions Json?                // Array of alternative solution approaches
+
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
-  
+
   attempts      Attempt[]
-  
+
   @@index([difficulty])
 }
 
@@ -223,4 +228,42 @@ model EvalResult {
   score       Float
   metrics     Json
   createdAt   DateTime @default(now())
+}
+
+// -------- Challenges Module --------
+model Challenge {
+  id           String   @id @default(cuid())
+  level        Int
+  slug         String   @unique
+  title        String
+  objective    String
+  passCriteria String
+  starter      Json     // { html?:string, css?:string, js?:string }
+  tests        Json     // array of test definitions interpreted by /api/eval
+  tags         String[]
+  paramsSchema Json?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  solutions    ChallengeSolution[]
+  hintTemplates ChallengeHintTemplate[]
+}
+
+model ChallengeSolution {
+  id          String   @id @default(cuid())
+  challengeId String
+  label       String
+  files       Json     // { html?:string, css?:string, js?:string }
+  notes       String?
+  createdAt   DateTime @default(now())
+  challenge   Challenge @relation(fields: [challengeId], references: [id], onDelete: Cascade)
+}
+
+model ChallengeHintTemplate {
+  id          String   @id @default(cuid())
+  challengeId String
+  level       Int      // 1..3
+  text        String
+  createdAt   DateTime @default(now())
+  challenge   Challenge @relation(fields: [challengeId], references: [id], onDelete: Cascade)
 }

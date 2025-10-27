@@ -1,0 +1,758 @@
+[
+  {
+    "id": "l1-1-headings-101",
+    "title": "Headings 101",
+    "description": "Welcome to your first HTML challenge! You're going to learn about one of the most fundamental building blocks of web pages: headings. In this challenge, you'll create an HTML document that includes at least one h1 element - the most important heading on any webpage.\n\nHeadings are like the chapter titles in a book - they organize content and tell both users and search engines what's most important on your page. The h1 tag represents the main heading, and it's typically the largest and most prominent text you'll see. Think of it as the title of your webpage's story. You'll discover how proper heading structure not only makes your content more readable but also helps with accessibility and SEO.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "tests": [
+      {
+        "id": "h1",
+        "code": "!!document.querySelector('h1')",
+        "label": "Has element: h1"
+      }
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "realWorldContext": "Every website you've ever visited uses headings to organize information. When you browse Netflix, the movie titles are headings. On news sites like CNN or BBC, article titles are h1 elements, while section headers use h2, h3, and so on. Even this tutorial platform uses headings to structure lessons and challenges!\n\nSearch engines like Google rely heavily on heading structure to understand what your page is about. A well-structured page with clear headings ranks better in search results. Screen readers used by visually impaired users also depend on headings to navigate content efficiently. This isn't just about making text bigger - it's about creating meaningful, accessible web experiences that work for everyone.",
+    "alternativeSolutions": [
+      {
+        "label": "Simple Title Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <h1>Welcome to My Website</h1>\n</body></html>",
+          "style.css": "",
+          "script.js": ""
+        },
+        "explanation": "The most straightforward approach - just add a simple h1 element with a basic title. This passes the test requirement and demonstrates the core concept. Perfect for beginners who want to understand the basics without any distractions."
+      },
+      {
+        "label": "Content-Rich Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <h1>Learning HTML Headings</h1>\n  <p>This page demonstrates the importance of proper heading structure in web development.</p>\n  <h2>What are headings?</h2>\n  <p>Headings help organize content and improve accessibility.</p>\n</body></html>",
+          "style.css": "",
+          "script.js": ""
+        },
+        "explanation": "This approach goes beyond the minimum requirement by showing how h1 fits into a proper document structure with additional content and subheadings. Great for understanding how headings work in context with other HTML elements."
+      },
+      {
+        "label": "Styled Professional Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <header>\n    <h1>Professional Web Page</h1>\n  </header>\n  <main>\n    <p>This demonstrates a more realistic page structure with semantic HTML and custom styling.</p>\n  </main>\n</body></html>",
+          "style.css": "body {\n  font-family: Arial, sans-serif;\n  line-height: 1.6;\n  margin: 0;\n  padding: 20px;\n  background-color: #f4f4f4;\n}\n\nheader {\n  background-color: #333;\n  color: white;\n  padding: 1rem;\n  border-radius: 5px;\n}\n\nh1 {\n  margin: 0;\n  font-size: 2.5rem;\n}\n\nmain {\n  background-color: white;\n  padding: 2rem;\n  margin-top: 1rem;\n  border-radius: 5px;\n  box-shadow: 0 2px 5px rgba(0,0,0,0.1);\n}",
+          "script.js": ""
+        },
+        "explanation": "This approach combines the h1 requirement with semantic HTML structure and professional styling. It shows how headings work in real-world scenarios with proper page layout, CSS styling, and semantic elements like header and main. Use this when you want to see the bigger picture of modern web development."
+      }
+    ]
+  },
+  {
+    "id": "l1-10-semantic-layout",
+    "title": "Semantic Layout",
+    "description": "HTML: Semantic Layout",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "tests": [
+      {
+        "id": "body",
+        "code": "!!document.querySelector('body')",
+        "label": "Has element: body"
+      }
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "realWorldContext": "This skill is fundamental to web development and you'll use it frequently in real projects.",
+    "alternativeSolutions": [
+      {
+        "label": "Basic Solution",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+          "style.css": "",
+          "script.js": ""
+        },
+        "explanation": "A straightforward approach that meets the requirements."
+      }
+    ]
+  },
+  {
+    "id": "l1-11-article-section",
+    "title": "Article & Section",
+    "description": "HTML: Article & Section",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "tests": [
+      {
+        "id": "body",
+        "code": "!!document.querySelector('body')",
+        "label": "Has element: body"
+      }
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "realWorldContext": "This skill is fundamental to web development and you'll use it frequently in real projects.",
+    "alternativeSolutions": [
+      {
+        "label": "Basic Solution",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+          "style.css": "",
+          "script.js": ""
+        },
+        "explanation": "A straightforward approach that meets the requirements."
+      }
+    ]
+  },
+  {
+    "id": "l1-12-figure-figcaption",
+    "title": "Figure & Figcaption",
+    "description": "In this challenge, you'll learn to use HTML's `<figure>` and `<figcaption>` elements to create semantically meaningful image displays with captions. Think of these elements as a way to package an image (or other media) together with its description, just like you'd see in a magazine or textbook. The `<figure>` element acts as a container that groups related content, while `<figcaption>` provides a caption or description for that content.\n\nYou'll discover how these semantic HTML elements make your content more accessible to screen readers and other assistive technologies. Instead of just throwing an image and some text onto a page, you're creating a meaningful relationship between them that browsers and search engines can understand. This is a fundamental concept in modern web development where semantic markup helps create better user experiences for everyone.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "tests": [
+      {
+        "id": "body",
+        "code": "!!document.querySelector('body')",
+        "label": "Has element: body"
+      }
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "realWorldContext": "The `<figure>` and `<figcaption>` elements are everywhere in professional web development. News websites like BBC or CNN use them extensively for article images with captions. E-commerce sites use them for product images with descriptions. Educational platforms like Khan Academy or Coursera use them for diagrams and illustrations in their courses.\n\nBeyond just images, these elements are perfect for code snippets, charts, videos, or any content that needs explanation. They improve your site's SEO because search engines better understand the relationship between media and its description. They're also crucial for accessibility compliance, helping screen reader users understand what images show and why they're relevant to the content.",
+    "alternativeSolutions": [
+      {
+        "label": "Basic Image with Caption",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <figure>\n    <img src=\"https://picsum.photos/400/300\" alt=\"Beautiful landscape scenery\">\n    <figcaption>A stunning mountain landscape captured during golden hour</figcaption>\n  </figure>\n</body></html>",
+          "style.css": "figure {\n  max-width: 400px;\n  margin: 2rem auto;\n  text-align: center;\n  border: 1px solid #ddd;\n  border-radius: 8px;\n  padding: 1rem;\n  background: #f9f9f9;\n}\n\nfigcaption {\n  margin-top: 0.5rem;\n  font-style: italic;\n  color: #666;\n  font-size: 0.9rem;\n}",
+          "script.js": ""
+        },
+        "explanation": "This is the most straightforward approach - a single image with a descriptive caption. Perfect for blog posts, articles, or any content where you need to explain what an image shows. The styling creates a clean, card-like presentation that's commonly used across the web."
+      },
+      {
+        "label": "Multiple Media Gallery",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <section>\n    <h2>Photo Gallery</h2>\n    \n    <figure>\n      <img src=\"https://picsum.photos/300/200?random=1\" alt=\"Nature photography\">\n      <figcaption>Figure 1: Morning dew on fresh leaves</figcaption>\n    </figure>\n    \n    <figure>\n      <img src=\"https://picsum.photos/300/200?random=2\" alt=\"Architecture photography\">\n      <figcaption>Figure 2: Modern architectural design elements</figcaption>\n    </figure>\n    \n    <figure>\n      <img src=\"https://picsum.photos/300/200?random=3\" alt=\"Street photography\">\n      <figcaption>Figure 3: Urban life in the early evening</figcaption>\n    </figure>\n  </section>\n</body></html>",
+          "style.css": "section {\n  max-width: 800px;\n  margin: 0 auto;\n  padding: 2rem;\n}\n\nh2 {\n  text-align: center;\n  margin-bottom: 2rem;\n  color: #333;\n}\n\nfigure {\n  display: inline-block;\n  margin: 1rem;\n  padding: 0.5rem;\n  border: 1px solid #eee;\n  border-radius: 4px;\n  vertical-align: top;\n}\n\nfigure img {\n  width: 100%;\n  height: auto;\n  display: block;\n}\n\nfigcaption {\n  margin-top: 0.5rem;\n  font-size: 0.8rem;\n  color: #555;\n  font-weight: 500;\n}",
+          "script.js": ""
+        },
+        "explanation": "This approach demonstrates how to use multiple figure elements to create a gallery or collection. It's ideal for portfolios, documentation with multiple diagrams, or any content that needs several related images with individual captions. The layout automatically adapts to different screen sizes."
+      },
+      {
+        "label": "Interactive Code Example",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <article>\n    <h1>Learning HTML Figures</h1>\n    \n    <figure class=\"code-example\">\n      <pre><code>&lt;figure&gt;\n  &lt;img src=\"image.jpg\" alt=\"Description\"&gt;\n  &lt;figcaption&gt;Caption text&lt;/figcaption&gt;\n&lt;/figure&gt;</code></pre>\n      <figcaption>Code Example 1: Basic figure and figcaption structure</figcaption>\n    </figure>\n    \n    <figure class=\"demo\">\n      <img src=\"https://picsum.photos/350/250\" alt=\"Demo image\" id=\"demoImage\">\n      <figcaption id=\"demoCaption\">Click the image to change it!</figcaption>\n    </figure>\n  </article>\n</body></html>",
+          "style.css": "article {\n  max-width: 600px;\n  margin: 2rem auto;\n  padding: 1rem;\n  font-family: Arial, sans-serif;\n  line-height: 1.6;\n}\n\nh1 {\n  color: #2c3e50;\n  text-align: center;\n}\n\nfigure {\n  margin: 2rem 0;\n  padding: 1rem;\n  border-left: 4px solid #3498db;\n  background: #f8f9fa;\n}\n\n.code-example pre {\n  background: #2d3748;\n  color: #e2e8f0;\n  padding: 1rem;\n  border-radius: 4px;\n  overflow-x: auto;\n}\n\n.demo img {\n  width: 100%;\n  height: auto;\n  cursor: pointer;\n  transition: transform 0.2s ease;\n}\n\n.demo img:hover {\n  transform: scale(1.02);\n}\n\nfigcaption {\n  margin-top: 0.5rem;\n  font-size: 0.9rem;\n  color: #666;\n  font-style: italic;\n}",
+          "script.js": "document.addEventListener('DOMContentLoaded', function() {\n  const demoImage = document.getElementById('demoImage');\n  const demoCaption = document.getElementById('demoCaption');\n  \n  const images = [\n    { src: 'https://picsum.photos/350/250?random=1', caption: 'Beautiful nature scene' },\n    { src: 'https://picsum.photos/350/250?random=2', caption: 'Urban architecture' },\n    { src: 'https://picsum.photos/350/250?random=3', caption: 'Peaceful landscape' }\n  ];\n  \n  let currentIndex = 0;\n  \n  demoImage.addEventListener('click', function() {\n    currentIndex = (currentIndex + 1) % images.length;\n    demoImage.src = images[currentIndex].src;\n    demoCaption.textContent = images[currentIndex].caption;\n  });\n});"
+        },
+        "explanation": "This advanced approach shows how figure elements can be used for more than just static images. It includes code examples (perfect for documentation) and interactive elements. This pattern is common in tutorials, technical documentation, and educational content where you need to show both examples and live demos."
+      }
+    ]
+  },
+  {
+    "id": "l1-13-emphasis-strong",
+    "title": "Emphasis & Strong",
+    "description": "In this challenge, you'll learn about two fundamental HTML elements that help you add meaning and visual emphasis to your text: `<em>` and `<strong>`. While they might seem simple, these elements are crucial for creating accessible, semantic web content that both humans and screen readers can understand properly.\n\nYou'll discover the difference between emphasis (using `<em>` for stress emphasis, like when you'd naturally emphasize a word while speaking) and importance (using `<strong>` for content that's significantly important or urgent). Think of `<em>` as the HTML equivalent of italicizing a word for emphasis in speech, while `<strong>` is like making something bold because it's critically important. By the end of this challenge, you'll understand how to use these elements correctly and why semantic HTML matters more than just making text look different.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "tests": [
+      {
+        "id": "body",
+        "code": "!!document.querySelector('body')",
+        "label": "Has element: body"
+      }
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "realWorldContext": "These elements are everywhere in modern web development! Every blog post, news article, documentation site, and e-commerce product description uses emphasis and strong elements to guide readers' attention and convey meaning. For example, on Medium or Dev.to, writers use `<em>` to emphasize key points in their articles, while `<strong>` highlights critical warnings or important takeaways. E-commerce sites like Amazon use `<strong>` for pricing information and product highlights that customers need to notice immediately.\n\nBeyond visual styling, these elements are essential for web accessibility. Screen readers interpret `<em>` and `<strong>` differently, helping visually impaired users understand the intended emphasis and importance of content. Search engines also use these semantic cues to better understand your content's structure and meaning, which can improve your SEO rankings. Modern frameworks like React and Vue.js rely heavily on semantic HTML, making these foundational skills crucial for any web developer.",
+    "alternativeSolutions": [
+      {
+        "label": "Basic Semantic Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <h1>Understanding Emphasis and Importance</h1>\n  \n  <p>When writing content, we often need to <em>emphasize</em> certain words to show how they should be read aloud.</p>\n  \n  <p>Sometimes information is <strong>critically important</strong> and needs to stand out for safety or clarity.</p>\n  \n  <p>You can even combine them: <strong>Warning: <em>Never</em> ignore this safety instruction!</strong></p>\n</body></html>",
+          "style.css": "/* Default browser styles will apply:\n   em { font-style: italic; }\n   strong { font-weight: bold; }\n*/\n\nbody {\n  font-family: Arial, sans-serif;\n  line-height: 1.6;\n  max-width: 600px;\n  margin: 0 auto;\n  padding: 20px;\n}\n\nh1 {\n  color: #333;\n  margin-bottom: 20px;\n}",
+          "script.js": "// No JavaScript needed for this semantic HTML approach\n// The browser handles the emphasis and strong elements automatically"
+        },
+        "explanation": "This approach focuses on semantic correctness and accessibility. It uses the elements as intended: `<em>` for emphasis that would be stressed in speech, and `<strong>` for important content. This is the most accessible and SEO-friendly approach, as screen readers and search engines understand the semantic meaning."
+      },
+      {
+        "label": "Styled Content Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <article class=\"content\">\n    <h2>Product Review: Gaming Laptop</h2>\n    \n    <p>This laptop delivers <em>exceptional</em> performance for gaming enthusiasts.</p>\n    \n    <p class=\"highlight\"><strong>Key Features:</strong></p>\n    <ul>\n      <li><strong>16GB RAM</strong> - Perfect for multitasking</li>\n      <li><em>Ultra-fast</em> SSD storage</li>\n      <li><strong>RTX 4060</strong> graphics card</li>\n    </ul>\n    \n    <p class=\"warning\"><strong>Important:</strong> <em>Always</em> use the included cooling pad!</p>\n  </article>\n</body></html>",
+          "style.css": "body {\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n  background-color: #f5f5f5;\n  margin: 0;\n  padding: 20px;\n}\n\n.content {\n  background: white;\n  padding: 30px;\n  border-radius: 8px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.1);\n  max-width: 700px;\n  margin: 0 auto;\n}\n\nem {\n  font-style: italic;\n  color: #2563eb;\n  font-weight: 500;\n}\n\nstrong {\n  font-weight: bold;\n  color: #dc2626;\n}\n\n.highlight {\n  background-color: #fef3c7;\n  padding: 10px;\n  border-left: 4px solid #f59e0b;\n  margin: 15px 0;\n}\n\n.warning {\n  background-color: #fee2e2;\n  border: 1px solid #fca5a5;\n  padding: 15px;\n  border-radius: 4px;\n  margin-top: 20px;\n}\n\nul {\n  list-style-type: none;\n  padding-left: 0;\n}\n\nli {\n  padding: 8px 0;\n  border-bottom: 1px solid #e5e7eb;\n}\n\nli:last-child {\n  border-bottom: none;\n}",
+          "script.js": "// Add some interactive emphasis effects\ndocument.addEventListener('DOMContentLoaded', function() {\n  // Highlight all strong elements on hover\n  const strongElements = document.querySelectorAll('strong');\n  \n  strongElements.forEach(element => {\n    element.addEventListener('mouseenter', function() {\n      this.style.backgroundColor = '#fee2e2';\n      this.style.padding = '2px 4px';\n      this.style.borderRadius = '3px';\n      this.style.transition = 'all 0.2s ease';\n    });\n    \n    element.addEventListener('mouseleave', function() {\n      this.style.backgroundColor = 'transparent';\n      this.style.padding = '0';\n    });\n  });\n  \n  // Add a subtle animation to emphasized text\n  const emElements = document.querySelectorAll('em');\n  \n  emElements.forEach(element => {\n    element.addEventListener('click', function() {\n      this.style.transform = 'scale(1.1)';\n      this.style.transition = 'transform 0.1s ease';\n      \n      setTimeout(() => {\n        this.style.transform = 'scale(1)';\n      }, 150);\n    });\n  });\n});"
+        },
+        "explanation": "This approach combines semantic HTML with enhanced styling and interactivity. It maintains the proper use of `<em>` and `<strong>` while adding visual appeal through CSS and subtle JavaScript interactions. This is great for content-heavy sites where you want to maintain accessibility while creating an engaging user experience."
+      },
+      {
+        "label": "Accessibility-First Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Challenge</title>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n  <main role=\"main\">\n    <header>\n      <h1>Web Accessibility Guidelines</h1>\n    </header>\n    \n    <section aria-labelledby=\"emphasis-heading\">\n      <h2 id=\"emphasis-heading\">Understanding Emphasis</h2>\n      \n      <p>Screen readers will <em>naturally emphasize</em> words marked with the emphasis element.</p>\n      \n      <p><strong>Critical accessibility rule:</strong> Never use <code>&lt;b&gt;</code> or <code>&lt;i&gt;</code> when you mean emphasis or importance.</p>\n    </section>\n    \n    <section aria-labelledby=\"examples-heading\">\n      <h2 id=\"examples-heading\">Practical Examples</h2>\n      \n      <div class=\"example-box\" role=\"region\" aria-label=\"Form validation example\">\n        <p><strong>Error:</strong> <em>Please</em> enter a valid email address.</p>\n      </div>\n      \n      <div class=\"example-box\" role=\"region\" aria-label=\"Success message example\">\n        <p><strong>Success!</strong> Your account has been <em>successfully</em> created.</p>\n      </div>\n    </section>\n  </main>\n</body></html>",
+          "style.css": "/* High contrast, accessible styling */\nbody {\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n  line-height: 1.6;\n  color: #212529;\n  background-color: #ffffff;\n  margin: 0;\n  padding: 0;\n  font-size: 18px; /* Larger base font size for accessibility */\n}\n\nmain {\n  max-width: 800px;\n  margin: 0 auto;\n  padding: 40px 20px;\n}\n\n/* High contrast focus indicators */\n*:focus {\n  outline: 3px solid #005fcc;\n  outline-offset: 2px;\n}\n\n/* Semantic emphasis styling */\nem {\n  font-style: italic;\n  color: #0066cc;\n  text-decoration: underline;\n  text-decoration-color: #0066cc;\n  text-decoration-thickness: 2px;\n  text-underline-offset: 2px;\n}\n\nstrong {\n  font-weight: 700;\n  color: #d63384;\n  background-color: #fff3cd;\n  padding: 2px 4px;\n  border-radius: 3px;\n}\n\n/* ARIA regions styling */\n.example-box {\n  border: 2px solid #dee2e6;\n  border-radius: 8px;\n  padding: 20px;\n  margin: 20px 0;\n  background-color: #f8f9fa;\n}\n\n.example-box[aria-label*=\"Error\"] {\n  border-color: #dc3545;\n  background-color: #f8d7da;\n}\n\n.example-box[aria-label*=\"Success\"] {\n  border-color: #198754;\n  background-color: #d1e7dd;\n}\n\n/* Headings with proper hierarchy */\nh1, h2 {\n  color: #495057;\n  margin-top: 0;\n}\n\nh1 {\n  font-size: 2.5rem;\n  margin-bottom: 1.5rem;\n}\n\nh2 {\n  font-size: 1.75rem;\n  margin-bottom: 1rem;\n  border-bottom: 2px solid #dee2e6;\n  padding-bottom: 0.5rem;\n}\n\n/* Code styling */\ncode {\n  background-color: #e9ecef;\n  padding: 2px 6px;\n  border-radius: 4px;\n  font-family: 'Courier New', monospace;\n  font-size: 0.9em;\n}\n\n/* Responsive design */\n@media (max-width: 768px) {\n  main {\n    padding: 20px 15px;\n  }\n  \n  h1 {\n    font-size: 2rem;\n  }\n  \n  h2 {\n    font-size: 1.5rem;\n  }\n}",
+          "script.js": "// Accessibility-focused JavaScript\ndocument.addEventListener('DOMContentLoaded', function() {\n  // Announce emphasis changes to screen readers\n  function announceEmphasis() {\n    const emphasisElements = document.querySelectorAll('em, strong');\n    \n    emphasisElements.forEach(element => {\n      // Add ARIA labels for better screen reader support\n      if (element.tagName.toLowerCase() === 'em') {\n        element.setAttribute('aria-label', `Emphasized: ${element.textContent}`);\n      } else if (element.tagName.toLowerCase() === 'strong') {\n        element.setAttribute('aria-label', `Important: ${element.textContent}`);\n      }\n    });\n  }\n  \n  // Initialize accessibility features\n  announceEmphasis();\n  \n  // Add keyboard navigation support\n  document.addEventListener('keydown', function(event) {\n    // Skip to next emphasis with Ctrl+E\n    if (event.ctrlKey && event.key === 'e') {\n      event.preventDefault();\n      const emphasisElements = Array.from(document.querySelectorAll('em, strong'));\n      const currentFocus = document.activeElement;\n      \n      let currentIndex = emphasisElements.indexOf(currentFocus);\n      let nextIndex = (currentIndex + 1) % emphasisElements.length;\n      \n      if (nextIndex === 0 && currentIndex === -1) {\n        nextIndex = 0;\n      }\n      \n      if (emphasisElements[nextIndex]) {\n        emphasisElements[nextIndex].focus();\n        emphasisElements[nextIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });\n      }\n    }\n  });\n  \n  // Make emphasis elements focusable for keyboard navigation\n  const emphasisElements = document.querySelectorAll('em, strong');\n  emphasisElements.forEach(element => {\n    element.setAttribute('tabindex', '0');\n    element.setAttribute('role', 'text');\n  });\n  \n  // Add live region for dynamic announcements\n  const liveRegion = document.createElement('div');\n  liveRegion.setAttribute('aria-live', 'polite');\n  liveRegion.setAttribute('aria-atomic', 'true');\n  liveRegion.style.position = 'absolute';\n  liveRegion.style.left = '-10000px';\n  liveRegion.style.width = '1px';\n  liveRegion.style.height = '1px';\n  liveRegion.style.overflow = 'hidden';\n  document.body.appendChild(liveRegion);\n  \n  console.log('Accessibility features loaded. Press Ctrl+E to navigate between emphasis elements.');\n});"
+        },
+        "explanation": "This approach prioritizes web accessibility while maintaining semantic correctness. It includes ARIA labels, proper focus management, keyboard navigation, high contrast styling, and screen reader optimizations. This is essential for creating inclusive web experiences and is increasingly required for compliance with accessibility standards like WCAG 2.1."
+      }
+    ]
+  },
+  {
+    "id": "l1-14-code-pre",
+    "title": "Code & Pre",
+    "description": "In this challenge, you'll explore two essential HTML elements that every developer needs to know: `<code>` and `<pre>`. These elements are your go-to tools for displaying code snippets, technical documentation, and preserving text formatting on web pages. You'll learn how the `<code>` element semantically marks inline code fragments, while the `<pre>` element preserves whitespace and line breaks for larger code blocks or formatted text.\n\nThrough hands-on practice, you'll discover how these elements work together to create readable, well-structured technical content. You'll also explore how to style them effectively and understand the important distinction between semantic meaning (what the content represents) and visual presentation (how it looks). This foundation will serve you well as you build documentation sites, tutorials, or any web content that includes code examples.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "tests": [
+      {
+        "id": "body",
+        "code": "!!document.querySelector('body')",
+        "label": "Has element: body"
+      }
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "realWorldContext": "The `<code>` and `<pre>` elements are everywhere in the web development world. Visit GitHub, Stack Overflow, or any programming tutorial site, and you'll see these elements in action. GitHub uses them to display code in README files and issue discussions, while Stack Overflow relies on them for the millions of code snippets shared by developers daily. Documentation sites like MDN Web Docs use `<code>` for inline function names and `<pre>` for complete code examples.\n\nBeyond code, the `<pre>` element is valuable for displaying ASCII art, formatted data, poetry, or any content where spacing and line breaks matter. Understanding these elements properly ensures your technical content is accessible to screen readers and maintains semantic meaning, which is crucial for SEO and web standards compliance.",
+    "alternativeSolutions": [
+      {
+        "label": "Basic Code Documentation Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title><link rel=\"stylesheet\" href=\"style.css\"></head>\n<body>\n  <h1>JavaScript Basics</h1>\n  \n  <p>To declare a variable in JavaScript, use the <code>let</code> keyword:</p>\n  \n  <pre><code>let message = \"Hello, World!\";\nconsole.log(message);</code></pre>\n  \n  <p>You can also use <code>const</code> for constants and <code>var</code> for older syntax.</p>\n  \n  <h2>Function Example</h2>\n  <pre><code>function greetUser(name) {\n  return `Hello, ${name}!`;\n}\n\nconst greeting = greetUser(\"Alice\");\nconsole.log(greeting);</code></pre>\n</body></html>",
+          "style.css": "body {\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\n  max-width: 800px;\n  margin: 0 auto;\n  padding: 20px;\n  line-height: 1.6;\n}\n\ncode {\n  background-color: #f1f3f4;\n  padding: 2px 6px;\n  border-radius: 3px;\n  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;\n  font-size: 0.9em;\n  color: #d73a49;\n}\n\npre {\n  background-color: #f8f9fa;\n  border: 1px solid #e1e4e8;\n  border-radius: 6px;\n  padding: 16px;\n  overflow-x: auto;\n  margin: 16px 0;\n}\n\npre code {\n  background: none;\n  padding: 0;\n  color: #24292e;\n  font-size: 14px;\n}",
+          "script.js": ""
+        },
+        "explanation": "This approach demonstrates the most common use case: technical documentation with inline code references and larger code blocks. It shows how `<code>` and `<pre>` work together, with styling that differentiates inline code from block code. Perfect for tutorials, documentation, and educational content."
+      },
+      {
+        "label": "Creative Content Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title><link rel=\"stylesheet\" href=\"style.css\"></head>\n<body>\n  <h1>The Art of ASCII</h1>\n  \n  <p>Sometimes code isn't just about programming. The <code>&lt;pre&gt;</code> element preserves spacing for creative content:</p>\n  \n  <pre class=\"ascii-art\">    /\\_/\\  \n   ( o.o ) \n    > ^ <   \n  Meow!</pre>\n  \n  <h2>Formatted Data</h2>\n  <p>Perfect for displaying structured information where alignment matters:</p>\n  \n  <pre class=\"data-table\">Name        | Age | City\n------------|-----|----------\nAlice       | 25  | Tokyo\nBob         | 30  | Osaka\nCharlie     | 28  | Kyoto</pre>\n  \n  <p>The key is using <code>white-space: pre</code> to preserve all formatting.</p>\n</body></html>",
+          "style.css": "body {\n  font-family: Georgia, serif;\n  max-width: 700px;\n  margin: 0 auto;\n  padding: 20px;\n  background-color: #fefefe;\n}\n\nh1, h2 {\n  color: #2c3e50;\n  border-bottom: 2px solid #3498db;\n  padding-bottom: 10px;\n}\n\ncode {\n  background-color: #ecf0f1;\n  color: #2c3e50;\n  padding: 3px 6px;\n  border-radius: 4px;\n  font-family: 'Courier New', monospace;\n  font-weight: bold;\n}\n\npre {\n  font-family: 'Courier New', monospace;\n  border-radius: 8px;\n  padding: 20px;\n  margin: 20px 0;\n  overflow-x: auto;\n}\n\n.ascii-art {\n  background: linear-gradient(45deg, #ff9a9e, #fecfef);\n  color: #2c3e50;\n  text-align: center;\n  font-weight: bold;\n  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);\n}\n\n.data-table {\n  background-color: #34495e;\n  color: #ecf0f1;\n  font-size: 14px;\n  border-left: 4px solid #3498db;\n}",
+          "script.js": ""
+        },
+        "explanation": "This approach showcases the versatility of `<pre>` beyond just code. It's perfect for ASCII art, formatted data tables, poetry, or any content where precise spacing and line breaks are crucial. Shows how creative styling can make even simple text content visually appealing."
+      },
+      {
+        "label": "Interactive Code Demo Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title><link rel=\"stylesheet\" href=\"style.css\"></head>\n<body>\n  <h1>Interactive Code Examples</h1>\n  \n  <div class=\"code-section\">\n    <h2>HTML Structure</h2>\n    <p>Click the <code>button</code> element to see it in action:</p>\n    \n    <pre class=\"code-block\"><code>&lt;button onclick=\"showMessage()\"&gt;\n  Click me!\n&lt;/button&gt;</code></pre>\n    \n    <div class=\"demo-area\">\n      <button onclick=\"showMessage()\">Click me!</button>\n      <div id=\"output\"></div>\n    </div>\n  </div>\n  \n  <div class=\"code-section\">\n    <h2>CSS Styling</h2>\n    <p>The <code>:hover</code> pseudo-class adds interactivity:</p>\n    \n    <pre class=\"code-block\"><code>button:hover {\n  background-color: #007bff;\n  transform: scale(1.05);\n}</code></pre>\n  </div>\n  \n  <div class=\"code-section\">\n    <h2>JavaScript Function</h2>\n    <p>The <code>showMessage()</code> function updates the DOM:</p>\n    \n    <pre class=\"code-block\"><code>function showMessage() {\n  const output = document.getElementById('output');\n  output.textContent = 'Hello from JavaScript!';\n}</code></pre>\n  </div>\n</body></html>",
+          "style.css": "body {\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 20px;\n  background-color: #f5f7fa;\n}\n\n.code-section {\n  background: white;\n  margin: 20px 0;\n  padding: 20px;\n  border-radius: 8px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.1);\n}\n\ncode {\n  background-color: #e8f4fd;\n  color: #0366d6;\n  padding: 3px 6px;\n  border-radius: 3px;\n  font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;\n  font-size: 0.9em;\n  font-weight: 600;\n}\n\n.code-block {\n  background-color: #1e1e1e;\n  color: #d4d4d4;\n  padding: 20px;\n  border-radius: 6px;\n  overflow-x: auto;\n  margin: 15px 0;\n  border-left: 4px solid #007acc;\n}\n\n.code-block code {\n  background: none;\n  color: inherit;\n  padding: 0;\n  font-weight: normal;\n}\n\n.demo-area {\n  background-color: #f8f9fa;\n  padding: 20px;\n  border-radius: 6px;\n  margin-top: 15px;\n  text-align: center;\n}\n\nbutton {\n  background-color: #28a745;\n  color: white;\n  border: none;\n  padding: 12px 24px;\n  border-radius: 6px;\n  font-size: 16px;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n\nbutton:hover {\n  background-color: #007bff;\n  transform: scale(1.05);\n}\n\n#output {\n  margin-top: 15px;\n  padding: 10px;\n  background-color: #d1ecf1;\n  border-radius: 4px;\n  min-height: 20px;\n  color: #0c5460;\n  font-weight: bold;\n}",
+          "script.js": "function showMessage() {\n  const output = document.getElementById('output');\n  const messages = [\n    'Hello from JavaScript!',\n    'Code and Pre elements rock!',\n    'You clicked the button!',\n    'Interactive demos are fun!'\n  ];\n  \n  const randomMessage = messages[Math.floor(Math.random() * messages.length)];\n  output.textContent = randomMessage;\n  \n  // Add a little animation\n  output.style.opacity = '0';\n  setTimeout(() => {\n    output.style.opacity = '1';\n  }, 100);\n}"
+        },
+        "explanation": "This approach combines `<code>` and `<pre>` with interactive elements to create an engaging learning experience. It demonstrates how these elements work in real tutorials and documentation that include working examples. Perfect for educational platforms, coding bootcamps, or interactive documentation where students can see code and try it immediately."
+      }
+    ]
+  },
+  {
+    "id": "l1-15-blockquote-cite",
+    "title": "Blockquote & Cite",
+    "description": "In this challenge, you'll learn how to properly quote and cite content in HTML using the `<blockquote>` and `<cite>` elements. You'll create a webpage that displays a meaningful quote along with proper attribution to its source. This might seem simple, but you're actually learning fundamental semantic HTML that helps both browsers and screen readers understand the structure and meaning of your content.\n\nThe `<blockquote>` element is specifically designed for longer quotations that are set apart from the main text, while `<cite>` is used to reference the title of a creative work or the name of the person being quoted. By the end of this challenge, you'll understand how these elements work together to create properly structured, accessible content that follows web standards.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "tests": [
+      {
+        "id": "body",
+        "code": "!!document.querySelector('body')",
+        "label": "Has element: body"
+      }
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "realWorldContext": "Proper quotation markup is everywhere on the web! News websites like BBC or CNN use blockquotes when featuring quotes from interviews or press releases. Blog platforms like Medium automatically style blockquotes when writers want to highlight important passages. Academic websites and research papers rely heavily on proper citation markup for credibility and accessibility.\n\nBeyond just looking good, semantic quote markup helps search engines understand your content better, improves SEO, and ensures that screen readers can properly announce quotes to visually impaired users. When you use the right HTML elements, you're not just styling text – you're adding meaning that makes the web more accessible and machine-readable.",
+    "alternativeSolutions": [
+      {
+        "label": "Classic Literature Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title><link rel=\"stylesheet\" href=\"style.css\"></head>\n<body>\n  <article>\n    <h1>名言集</h1>\n    <blockquote>\n      <p>「明日は明日の風が吹く」</p>\n      <footer>\n        — <cite>風と共に去りぬ</cite>より\n      </footer>\n    </blockquote>\n    \n    <blockquote>\n      <p>「人生は夢だらけ」</p>\n      <footer>\n        — <cite>夏目漱石</cite>\n      </footer>\n    </blockquote>\n  </article>\n</body>\n</html>",
+          "style.css": "body {\n  font-family: 'Georgia', serif;\n  max-width: 600px;\n  margin: 0 auto;\n  padding: 20px;\n  background: #f8f9fa;\n}\n\nh1 {\n  text-align: center;\n  color: #2c3e50;\n  margin-bottom: 40px;\n}\n\nblockquote {\n  background: white;\n  margin: 30px 0;\n  padding: 25px;\n  border-left: 4px solid #3498db;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.1);\n  position: relative;\n}\n\nblockquote::before {\n  content: '\"';\n  font-size: 4em;\n  color: #bdc3c7;\n  position: absolute;\n  top: -10px;\n  left: 10px;\n}\n\nblockquote p {\n  font-size: 1.2em;\n  line-height: 1.6;\n  margin: 0 0 15px 0;\n  font-style: italic;\n}\n\nblockquote footer {\n  text-align: right;\n  font-size: 0.9em;\n  color: #7f8c8d;\n}\n\ncite {\n  font-style: italic;\n  font-weight: bold;\n}",
+          "script.js": ""
+        },
+        "explanation": "This approach uses semantic HTML structure with proper blockquote and cite elements, enhanced with elegant styling. It's perfect for content-heavy sites, blogs, or literary websites where quotes need to stand out beautifully while maintaining accessibility."
+      },
+      {
+        "label": "Modern Card Design Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title><link rel=\"stylesheet\" href=\"style.css\"></head>\n<body>\n  <main class=\"quote-container\">\n    <div class=\"quote-card\">\n      <blockquote>\n        <p>「成功とは、失敗から失敗へと情熱を失うことなく進むことである」</p>\n      </blockquote>\n      <div class=\"author\">\n        <cite>ウィンストン・チャーチル</cite>\n      </div>\n    </div>\n    \n    <div class=\"quote-card\">\n      <blockquote>\n        <p>「学習に王道なし」</p>\n      </blockquote>\n      <div class=\"author\">\n        <cite>古代ギリシャの格言</cite>\n      </div>\n    </div>\n  </main>\n</body>\n</html>",
+          "style.css": "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  font-family: 'Helvetica Neue', Arial, sans-serif;\n  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n  min-height: 100vh;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 20px;\n}\n\n.quote-container {\n  display: grid;\n  gap: 30px;\n  max-width: 800px;\n}\n\n.quote-card {\n  background: white;\n  border-radius: 15px;\n  padding: 30px;\n  box-shadow: 0 10px 30px rgba(0,0,0,0.2);\n  transform: translateY(0);\n  transition: transform 0.3s ease;\n}\n\n.quote-card:hover {\n  transform: translateY(-5px);\n}\n\nblockquote {\n  margin-bottom: 20px;\n}\n\nblockquote p {\n  font-size: 1.3em;\n  line-height: 1.5;\n  color: #2c3e50;\n  position: relative;\n  padding-left: 20px;\n}\n\nblockquote p::before {\n  content: '💭';\n  position: absolute;\n  left: -10px;\n  top: 0;\n  font-size: 1.5em;\n}\n\n.author {\n  text-align: right;\n  padding-top: 15px;\n  border-top: 2px solid #ecf0f1;\n}\n\ncite {\n  color: #7f8c8d;\n  font-size: 1.1em;\n  font-style: normal;\n  font-weight: 600;\n}",
+          "script.js": ""
+        },
+        "explanation": "This modern approach uses card-based design with hover effects and gradient backgrounds. It's ideal for contemporary websites, social media platforms, or motivational quote applications where visual appeal and interactivity are important."
+      },
+      {
+        "label": "Accessible Minimal Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title><link rel=\"stylesheet\" href=\"style.css\"></head>\n<body>\n  <header>\n    <h1>今日の名言</h1>\n  </header>\n  \n  <main>\n    <section aria-labelledby=\"daily-quote\">\n      <h2 id=\"daily-quote\" class=\"sr-only\">本日の推薦引用</h2>\n      <blockquote cite=\"https://example.com/source\">\n        <p>「知識は力なり」</p>\n        <footer>\n          出典: <cite>フランシス・ベーコン</cite>, \n          <time datetime=\"1597\">1597年</time>\n        </footer>\n      </blockquote>\n    </section>\n    \n    <section aria-labelledby=\"wisdom-quote\">\n      <h2 id=\"wisdom-quote\" class=\"sr-only\">知恵の言葉</h2>\n      <blockquote>\n        <p>「一日一歩、三日で三歩、三歩進んで二歩下がる」</p>\n        <footer>\n          <cite>美空ひばり「津軽海峡冬景色」</cite>より\n        </footer>\n      </blockquote>\n    </section>\n  </main>\n</body>\n</html>",
+          "style.css": "/* Reset and base styles */\nbody {\n  font-family: system-ui, -apple-system, sans-serif;\n  line-height: 1.6;\n  color: #333;\n  max-width: 65ch;\n  margin: 0 auto;\n  padding: 1rem;\n}\n\n/* Screen reader only content */\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  border: 0;\n}\n\n/* Header */\nheader {\n  text-align: center;\n  margin-bottom: 2rem;\n}\n\nh1 {\n  font-size: 2rem;\n  margin-bottom: 0.5rem;\n}\n\n/* Main content */\nsection {\n  margin-bottom: 2rem;\n}\n\n/* Blockquote styling */\nblockquote {\n  margin: 1.5rem 0;\n  padding-left: 1rem;\n  border-left: 3px solid #0066cc;\n  font-style: italic;\n}\n\nblockquote p {\n  font-size: 1.125rem;\n  margin-bottom: 0.5rem;\n}\n\nblockquote footer {\n  font-style: normal;\n  font-size: 0.9rem;\n  color: #666;\n}\n\ncite {\n  font-style: italic;\n}\n\ntime {\n  font-weight: bold;\n}\n\n/* Focus styles for accessibility */\n*:focus {\n  outline: 2px solid #0066cc;\n  outline-offset: 2px;\n}",
+          "script.js": ""
+        },
+        "explanation": "This approach prioritizes accessibility and semantic correctness with proper ARIA labels, screen reader support, and clean markup. It's perfect for educational sites, government websites, or any application where accessibility compliance and clean code structure are essential."
+      }
+    ]
+  },
+  {
+    "id": "l1-16-table-basic",
+    "title": "Table: Basic",
+    "description": "In this challenge, you'll create your first HTML table with proper structure and semantic markup. Tables are one of the most fundamental ways to display structured data on the web, and understanding how to build them correctly is essential for any web developer. You'll learn about the key table elements: `<table>` for the container, `<thead>` for the header section, and `<th>` for header cells that describe your data columns.\n\nThink of HTML tables like spreadsheets - they organize information in rows and columns, making data easy to scan and understand. The `<thead>` element is particularly important because it groups your header content, making your table more accessible to screen readers and easier to style. When you use `<th>` elements instead of regular `<td>` cells for headers, you're telling browsers and assistive technologies that these cells contain important descriptive information about the data in each column.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "tests": [
+      {
+        "id": "table",
+        "code": "!!document.querySelector('table thead th')",
+        "label": "Has element: table thead th"
+      }
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "realWorldContext": "Tables are everywhere in web development! You'll see them used for displaying user data in admin dashboards, showing product comparisons on e-commerce sites like Amazon, presenting financial data on banking websites, or even simple price lists on restaurant websites. Popular applications like Gmail use tables to display your email list, and project management tools like Trello use table-like structures for organizing tasks and data.\n\nProper table markup isn't just about making things look organized - it's crucial for accessibility. Screen readers rely on properly structured tables to help visually impaired users navigate and understand data. Search engines also use table structure to better understand and index your content. When you build tables the right way from the start, you're creating a foundation that works for everyone and can be easily styled with CSS later.",
+    "alternativeSolutions": [
+      {
+        "label": "Simple Data Table Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <table>\n    <thead>\n      <tr>\n        <th>Name</th>\n        <th>Age</th>\n        <th>City</th>\n      </tr>\n    </thead>\n  </table>\n</body></html>",
+          "style.css": "",
+          "script.js": ""
+        },
+        "explanation": "This is the most straightforward approach - a clean, minimal table structure that meets the requirements. Perfect for when you need a basic table without any extra complexity. This approach focuses purely on semantic HTML structure."
+      },
+      {
+        "label": "Complete Table with Body",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <table>\n    <thead>\n      <tr>\n        <th>Product</th>\n        <th>Price</th>\n        <th>Stock</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>Sample Item</td>\n        <td>¥1,000</td>\n        <td>5</td>\n      </tr>\n    </tbody>\n  </table>\n</body></html>",
+          "style.css": "",
+          "script.js": ""
+        },
+        "explanation": "This approach includes a `<tbody>` element for better semantic structure. While not required for this challenge, it's a best practice that makes your table more maintainable and easier to style. Use this when you plan to add actual data rows or want maximum semantic clarity."
+      },
+      {
+        "label": "Accessible Table with Caption",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <table>\n    <caption>Monthly Sales Data</caption>\n    <thead>\n      <tr>\n        <th scope=\"col\">Month</th>\n        <th scope=\"col\">Revenue</th>\n        <th scope=\"col\">Growth</th>\n      </tr>\n    </thead>\n  </table>\n</body></html>",
+          "style.css": "",
+          "script.js": ""
+        },
+        "explanation": "This approach prioritizes accessibility by adding a `<caption>` element and `scope` attributes to the header cells. The caption provides context about what the table contains, while `scope=\"col\"` explicitly tells screen readers that these headers apply to entire columns. Use this approach when building production tables that need to be fully accessible."
+      }
+    ]
+  },
+  {
+    "id": "l1-17-table-caption",
+    "title": "Table: Caption",
+    "description": "In this challenge, you'll learn how to create a proper HTML table structure with a caption and header row. You'll be building a basic table that includes a `<table>` element, a `<thead>` section for your header row, and `<th>` elements for your column headers. This might seem simple, but understanding table structure is crucial for creating accessible, well-organized data presentations on the web.\n\nThe key concepts you'll master here include semantic HTML structure, the importance of table headers for accessibility, and how screen readers and other assistive technologies rely on proper table markup to help users navigate tabular data. You'll also learn why the `<thead>` element matters - it's not just for styling, but it tells browsers and assistive devices which rows contain header information.\n\nThink of this as building the foundation for any data table you might create in the future. Whether you're displaying a simple list of products, a complex financial report, or even a basic schedule, this structure will serve you well.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "tests": [
+      {
+        "id": "table",
+        "code": "!!document.querySelector('table thead th')",
+        "label": "Has element: table thead th"
+      }
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "realWorldContext": "Tables are everywhere in web development! Every time you see a data grid on websites like Amazon (product comparison tables), GitHub (file listings), or even your bank's transaction history, you're looking at HTML tables. E-commerce sites use tables to display product specifications, SaaS applications use them for dashboards and reports, and content management systems rely on them for displaying lists of posts, users, or any structured data.\n\nProper table structure with captions and headers isn't just about making things look organized - it's about accessibility and SEO. Screen readers depend on `<th>` elements to help visually impaired users understand what each column represents. Search engines also use this semantic structure to better understand your content. When you build tables correctly from the start, you're creating content that works for everyone and performs better in search results.",
+    "alternativeSolutions": [
+      {
+        "label": "Basic Product Catalog Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <table>\n    <caption>商品一覧</caption>\n    <thead>\n      <tr>\n        <th>商品名</th>\n        <th>価格</th>\n        <th>在庫</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>ノートパソコン</td>\n        <td>¥89,800</td>\n        <td>15台</td>\n      </tr>\n      <tr>\n        <td>マウス</td>\n        <td>¥2,980</td>\n        <td>50個</td>\n      </tr>\n    </tbody>\n  </table>\n</body></html>",
+          "style.css": "table {\n  border-collapse: collapse;\n  width: 100%;\n  margin: 20px 0;\n}\n\ncaption {\n  font-size: 1.2em;\n  font-weight: bold;\n  margin-bottom: 10px;\n  text-align: left;\n}\n\nth, td {\n  border: 1px solid #ddd;\n  padding: 12px;\n  text-align: left;\n}\n\nth {\n  background-color: #f5f5f5;\n  font-weight: bold;\n}",
+          "script.js": ""
+        },
+        "explanation": "This approach creates a complete, real-world table structure with a caption, proper thead/tbody sections, and sample data. It's perfect when you need a straightforward, accessible table that clearly separates header content from data content. The caption provides context for what the table contains, which is especially helpful for screen readers."
+      },
+      {
+        "label": "Minimal Structure Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <table>\n    <caption>データテーブル</caption>\n    <thead>\n      <tr>\n        <th>項目A</th>\n        <th>項目B</th>\n      </tr>\n    </thead>\n  </table>\n</body></html>",
+          "style.css": "",
+          "script.js": ""
+        },
+        "explanation": "This is the absolute minimum structure needed to pass the test requirements. It includes just the essential elements: table, caption, thead, and th elements. Use this approach when you're focusing purely on the HTML structure without styling concerns, or as a starting point that you'll build upon later."
+      },
+      {
+        "label": "Accessibility-First Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <table role=\"table\" aria-describedby=\"table-summary\">\n    <caption id=\"table-summary\">\n      月別売上データ - 2024年第1四半期の業績一覧\n    </caption>\n    <thead>\n      <tr>\n        <th scope=\"col\" id=\"month\">月</th>\n        <th scope=\"col\" id=\"sales\">売上高</th>\n        <th scope=\"col\" id=\"growth\">前年比</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <th scope=\"row\" headers=\"month\">1月</th>\n        <td headers=\"sales month\">¥1,200,000</td>\n        <td headers=\"growth month\">+15%</td>\n      </tr>\n    </tbody>\n  </table>\n</body></html>",
+          "style.css": "table {\n  border-collapse: collapse;\n  width: 100%;\n  font-family: Arial, sans-serif;\n}\n\ncaption {\n  font-size: 1.1em;\n  font-weight: bold;\n  margin-bottom: 15px;\n  text-align: left;\n  color: #333;\n}\n\nth {\n  background-color: #e8f4f8;\n  border: 2px solid #4a90a4;\n  padding: 10px;\n  font-weight: bold;\n}\n\ntd {\n  border: 1px solid #ddd;\n  padding: 10px;\n}\n\n/* Focus styles for keyboard navigation */\nth:focus, td:focus {\n  outline: 2px solid #4a90a4;\n  outline-offset: 2px;\n}",
+          "script.js": ""
+        },
+        "explanation": "This approach maximizes accessibility by including ARIA attributes, scope attributes on headers, and detailed caption text. The `scope` and `headers` attributes help screen readers understand the relationship between data cells and their headers. Use this when building tables for applications that need to meet strict accessibility standards or when the data is complex enough to benefit from these additional semantic markers."
+      }
+    ]
+  },
+  {
+    "id": "l1-18-form-inputs",
+    "title": "Form Inputs",
+    "description": "In this challenge, you'll create your first HTML form input element - one of the most fundamental building blocks of interactive web pages. You'll learn how to add a text input field that users can type into, which is the foundation for collecting user data on websites. This might seem simple, but mastering form inputs is crucial because they're how users interact with and provide information to web applications.\n\nYou'll be working with the `<input>` element and its `type` attribute, specifically creating a text input field. This is your first step into making web pages interactive rather than just static displays of information. Understanding how to properly structure form inputs will set you up for more complex form handling later on.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "tests": [
+      {
+        "id": "inputs",
+        "code": "!!document.querySelector('input[type=text]')",
+        "label": "Has element: input[type=text]"
+      }
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "realWorldContext": "Form inputs are literally everywhere on the web - they're how users log into their accounts, search for content, submit comments, make purchases, and interact with almost every website you can think of. Every time you type into Google's search box, enter your email on a login page, or fill out a contact form, you're using HTML input elements just like the one you'll create in this challenge.\n\nMajor websites like Facebook (status updates), Amazon (search and checkout), and GitHub (code search, issue creation) all rely heavily on form inputs. Even simple blogs use them for comment sections and newsletter signups. Learning to create proper form inputs is essential because they're the primary way websites collect and process user data, making them one of the most practical skills in web development.",
+    "alternativeSolutions": [
+      {
+        "label": "Basic Text Input",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <input type=\"text\">\n</body></html>",
+          "style.css": "",
+          "script.js": ""
+        },
+        "explanation": "The simplest approach - just a bare text input element. This passes the test requirement but lacks context and usability features. Use this when you need a quick, minimal input field."
+      },
+      {
+        "label": "Labeled Form Input",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <form>\n    <label for=\"username\">Username:</label>\n    <input type=\"text\" id=\"username\" name=\"username\">\n  </form>\n</body></html>",
+          "style.css": "label {\n  display: block;\n  margin-bottom: 5px;\n  font-weight: bold;\n}\n\ninput[type=\"text\"] {\n  padding: 8px;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n}",
+          "script.js": ""
+        },
+        "explanation": "A more complete, semantic approach that includes proper form structure and labeling. This is better for accessibility and user experience. Use this when building real forms that users will interact with."
+      },
+      {
+        "label": "Enhanced Input with Placeholder",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <div class=\"input-container\">\n    <input type=\"text\" placeholder=\"Enter your name\" required>\n    <small>This field is required</small>\n  </div>\n</body></html>",
+          "style.css": ".input-container {\n  max-width: 300px;\n  margin: 20px;\n}\n\ninput[type=\"text\"] {\n  width: 100%;\n  padding: 12px;\n  border: 2px solid #e1e1e1;\n  border-radius: 6px;\n  font-size: 16px;\n  transition: border-color 0.3s;\n}\n\ninput[type=\"text\"]:focus {\n  outline: none;\n  border-color: #007bff;\n}\n\nsmall {\n  color: #666;\n  font-size: 12px;\n}",
+          "script.js": ""
+        },
+        "explanation": "A modern approach with enhanced UX features like placeholder text, validation, and styling. This provides better user guidance and visual feedback. Use this when you want to create polished, professional-looking forms."
+      }
+    ]
+  },
+  {
+    "id": "l1-19-form-required-email",
+    "title": "Form: Required Email",
+    "description": "In this challenge, you'll create a form with an email input field that's marked as required. This might sound simple, but you're actually learning one of the most fundamental aspects of web forms - client-side validation! You'll use HTML's built-in `required` attribute along with the `email` input type to create a form that won't submit unless the user provides a valid email address.\n\nThe beauty of this approach is that modern browsers do all the heavy lifting for you. When you combine `type=\"email\"` with the `required` attribute, the browser automatically validates that the input contains a properly formatted email address and prevents form submission if it's empty or invalid. You'll see how HTML5's semantic form controls can provide immediate user feedback without writing a single line of JavaScript.\n\nThis challenge teaches you about progressive enhancement - starting with solid HTML foundations that work everywhere, then building upon them. Even if JavaScript is disabled or CSS fails to load, your form will still function and validate properly because you're using the browser's native capabilities.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "tests": [
+      {
+        "id": "email",
+        "code": "!!document.querySelector('input[type=email][required]')?.getAttribute('required')",
+        "label": "Has attribute required on input[type=email][required]"
+      }
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "realWorldContext": "Email validation is everywhere on the web! Every time you sign up for a new account on Netflix, create a profile on LinkedIn, or subscribe to a newsletter, you're interacting with required email fields. Major websites like GitHub, Twitter, and Amazon all rely on this exact pattern for user registration and login forms. The `required` attribute isn't just a nice-to-have - it's essential for preventing incomplete form submissions and reducing server load from invalid requests.\n\nIn real applications, this client-side validation serves as the first line of defense in a multi-layered validation strategy. While you should always validate data on the server for security, the immediate feedback from required fields dramatically improves user experience by catching errors before the form is even submitted. This reduces frustration, decreases bounce rates, and helps users successfully complete important actions like account creation or checkout processes.",
+    "alternativeSolutions": [
+      {
+        "label": "Basic Required Email Form",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <form>\n    <label for=\"email\">Email Address:</label>\n    <input type=\"email\" id=\"email\" name=\"email\" required>\n    <button type=\"submit\">Submit</button>\n  </form>\n</body>\n</html>",
+          "style.css": "",
+          "script.js": ""
+        },
+        "explanation": "This is the most straightforward approach that meets the requirements. It uses semantic HTML with proper labels and focuses on accessibility. The `required` attribute provides immediate validation, and the `email` type ensures proper formatting. Perfect for simple forms where you just need basic email collection."
+      },
+      {
+        "label": "Enhanced User Experience Form",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title><link rel=\"stylesheet\" href=\"style.css\"></head>\n<body>\n  <form class=\"email-form\">\n    <div class=\"form-group\">\n      <label for=\"email\">Email Address</label>\n      <input type=\"email\" id=\"email\" name=\"email\" required placeholder=\"Enter your email address\">\n      <span class=\"form-hint\">We'll never share your email with anyone else.</span>\n    </div>\n    <button type=\"submit\" class=\"submit-btn\">Get Started</button>\n  </form>\n</body>\n</html>",
+          "style.css": ".email-form {\n  max-width: 400px;\n  margin: 2rem auto;\n  padding: 2rem;\n  font-family: Arial, sans-serif;\n}\n\n.form-group {\n  margin-bottom: 1.5rem;\n}\n\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: bold;\n  color: #333;\n}\n\ninput[type=\"email\"] {\n  width: 100%;\n  padding: 0.75rem;\n  border: 2px solid #ddd;\n  border-radius: 4px;\n  font-size: 1rem;\n  transition: border-color 0.3s ease;\n}\n\ninput[type=\"email\"]:focus {\n  outline: none;\n  border-color: #007bff;\n}\n\ninput[type=\"email\"]:invalid {\n  border-color: #dc3545;\n}\n\n.form-hint {\n  display: block;\n  margin-top: 0.25rem;\n  font-size: 0.875rem;\n  color: #666;\n}\n\n.submit-btn {\n  background-color: #007bff;\n  color: white;\n  padding: 0.75rem 1.5rem;\n  border: none;\n  border-radius: 4px;\n  font-size: 1rem;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.submit-btn:hover {\n  background-color: #0056b3;\n}",
+          "script.js": ""
+        },
+        "explanation": "This approach enhances the user experience with visual styling and helpful hints. The CSS provides visual feedback for validation states (invalid inputs get a red border), and the placeholder text guides users. The form hint builds trust by explaining data usage. Great for production websites where user experience is crucial."
+      },
+      {
+        "label": "Comprehensive Contact Form",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title><link rel=\"stylesheet\" href=\"style.css\"></head>\n<body>\n  <main>\n    <h1>Contact Us</h1>\n    <form class=\"contact-form\" novalidate>\n      <fieldset>\n        <legend>Contact Information</legend>\n        \n        <div class=\"form-row\">\n          <label for=\"name\">Full Name</label>\n          <input type=\"text\" id=\"name\" name=\"name\" required>\n        </div>\n        \n        <div class=\"form-row\">\n          <label for=\"email\">Email Address *</label>\n          <input type=\"email\" id=\"email\" name=\"email\" required aria-describedby=\"email-error\">\n          <div id=\"email-error\" class=\"error-message\" role=\"alert\"></div>\n        </div>\n        \n        <div class=\"form-row\">\n          <label for=\"message\">Message</label>\n          <textarea id=\"message\" name=\"message\" rows=\"4\"></textarea>\n        </div>\n        \n        <button type=\"submit\">Send Message</button>\n      </fieldset>\n    </form>\n  </main>\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "style.css": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  font-family: system-ui, -apple-system, sans-serif;\n  line-height: 1.6;\n  margin: 0;\n  padding: 2rem;\n  background-color: #f8f9fa;\n}\n\nmain {\n  max-width: 600px;\n  margin: 0 auto;\n  background: white;\n  padding: 2rem;\n  border-radius: 8px;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.1);\n}\n\nh1 {\n  color: #2c3e50;\n  margin-bottom: 1.5rem;\n}\n\nfieldset {\n  border: none;\n  padding: 0;\n  margin: 0;\n}\n\nlegend {\n  font-size: 1.25rem;\n  font-weight: bold;\n  margin-bottom: 1rem;\n  color: #34495e;\n}\n\n.form-row {\n  margin-bottom: 1.5rem;\n}\n\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n  font-weight: 500;\n  color: #2c3e50;\n}\n\ninput, textarea {\n  width: 100%;\n  padding: 0.75rem;\n  border: 2px solid #e1e8ed;\n  border-radius: 6px;\n  font-size: 1rem;\n  transition: all 0.3s ease;\n}\n\ninput:focus, textarea:focus {\n  outline: none;\n  border-color: #3498db;\n  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);\n}\n\ninput:invalid {\n  border-color: #e74c3c;\n}\n\ninput:valid {\n  border-color: #27ae60;\n}\n\n.error-message {\n  color: #e74c3c;\n  font-size: 0.875rem;\n  margin-top: 0.25rem;\n  min-height: 1.25rem;\n}\n\nbutton {\n  background-color: #3498db;\n  color: white;\n  padding: 0.875rem 2rem;\n  border: none;\n  border-radius: 6px;\n  font-size: 1rem;\n  font-weight: 500;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\nbutton:hover {\n  background-color: #2980b9;\n}\n\nbutton:disabled {\n  background-color: #bdc3c7;\n  cursor: not-allowed;\n}",
+          "script.js": "document.addEventListener('DOMContentLoaded', function() {\n  const form = document.querySelector('.contact-form');\n  const emailInput = document.getElementById('email');\n  const emailError = document.getElementById('email-error');\n  \n  // Custom validation messages\n  emailInput.addEventListener('invalid', function(e) {\n    e.preventDefault();\n    \n    if (emailInput.validity.valueMissing) {\n      emailError.textContent = 'Please enter your email address.';\n    } else if (emailInput.validity.typeMismatch) {\n      emailError.textContent = 'Please enter a valid email address.';\n    }\n  });\n  \n  // Clear error message when user starts typing\n  emailInput.addEventListener('input', function() {\n    emailError.textContent = '';\n  });\n  \n  // Form submission handling\n  form.addEventListener('submit', function(e) {\n    e.preventDefault();\n    \n    if (form.checkValidity()) {\n      alert('Form submitted successfully!');\n      // In a real app, you'd send the data to a server\n    } else {\n      // Focus on first invalid field\n      const firstInvalid = form.querySelector(':invalid');\n      if (firstInvalid) {\n        firstInvalid.focus();\n      }\n    }\n  });\n});"
+        },
+        "explanation": "This comprehensive approach demonstrates how required email validation fits into a larger form context. It includes custom JavaScript for better error messaging, accessibility features like ARIA attributes, and shows how to handle form validation in a more sophisticated way. The `novalidate` attribute lets us control validation timing and messaging. Perfect for learning how simple concepts scale up to complex applications."
+      }
+    ]
+  },
+  {
+    "id": "l1-2-paragraph-basics",
+    "title": "Paragraph Basics",
+    "description": "Welcome to your first HTML challenge! You're going to learn how to create paragraphs - the fundamental building blocks of web content. Think of paragraphs as the sentences and thoughts that make up every website you've ever visited. In this challenge, you'll discover how to structure text content using the `<p>` tag, which tells the browser \"hey, this is a paragraph of text that should be displayed as a cohesive block.\"\n\nWhile the test only requires a `<body>` element (which you already have!), the real learning happens when you start adding paragraph content inside it. You'll explore how browsers automatically handle spacing between paragraphs, how text flows within them, and why semantic HTML structure matters. This might seem simple, but mastering paragraphs is like learning to walk before you run - every complex website starts with these basic text elements.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "tests": [
+      {
+        "id": "body",
+        "code": "!!document.querySelector('body')",
+        "label": "Has element: body"
+      }
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "realWorldContext": "Paragraphs are literally everywhere on the web! Every blog post, news article, product description, and social media post uses paragraph tags. When you read an article on Medium, browse product reviews on Amazon, or scroll through your favorite news site, you're looking at countless `<p>` tags in action. Even this very text you're reading right now would be wrapped in paragraph tags if it were on a webpage.\n\nSearch engines like Google pay special attention to how your content is structured with proper paragraph tags. Well-structured paragraphs help with SEO (Search Engine Optimization), make your content more accessible to screen readers for visually impaired users, and ensure your text displays consistently across different devices and browsers. Professional developers use paragraphs as the foundation for everything from simple landing pages to complex content management systems.",
+    "alternativeSolutions": [
+      {
+        "label": "Simple Content Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <p>This is my first paragraph! It contains some basic text content.</p>\n  <p>Here's a second paragraph. Notice how the browser automatically adds space between paragraphs.</p>\n  <p>And here's a third paragraph to show how multiple paragraphs work together to create readable content.</p>\n</body></html>",
+          "style.css": "",
+          "script.js": ""
+        },
+        "explanation": "This straightforward approach focuses on the basics - just adding simple paragraph content. It's perfect for beginners because it demonstrates the core concept without any distractions. Use this when you want to focus purely on HTML structure and see how browsers handle paragraph spacing naturally."
+      },
+      {
+        "label": "Styled Content Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <p class=\"intro\">Welcome to my webpage! This introductory paragraph sets the tone for the entire page.</p>\n  <p class=\"content\">This paragraph contains the main content. It's styled differently to show how CSS can enhance basic HTML paragraphs.</p>\n  <p class=\"highlight\">This final paragraph is highlighted to draw attention. Notice how each paragraph can have its own styling while maintaining semantic meaning.</p>\n</body></html>",
+          "style.css": "body {\n  font-family: Arial, sans-serif;\n  line-height: 1.6;\n  max-width: 600px;\n  margin: 0 auto;\n  padding: 20px;\n}\n\n.intro {\n  font-size: 1.2em;\n  color: #2c3e50;\n  font-weight: bold;\n}\n\n.content {\n  color: #34495e;\n  margin: 20px 0;\n}\n\n.highlight {\n  background-color: #f8f9fa;\n  padding: 15px;\n  border-left: 4px solid #3498db;\n  font-style: italic;\n}",
+          "script.js": ""
+        },
+        "explanation": "This approach combines HTML paragraphs with CSS styling to show how basic content can be enhanced visually. It's great for learning how HTML structure and CSS presentation work together. Use this when you want to see how real websites style their paragraph content while keeping the HTML semantic and clean."
+      },
+      {
+        "label": "Interactive Content Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <p id=\"greeting\">Click me to change this paragraph!</p>\n  <p class=\"info\">This paragraph shows how HTML paragraphs can be interactive.</p>\n  <p class=\"counter\">You've clicked the first paragraph <span id=\"count\">0</span> times.</p>\n</body></html>",
+          "style.css": "body {\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n  padding: 30px;\n  background-color: #f5f5f5;\n}\n\np {\n  background-color: white;\n  padding: 15px;\n  margin: 15px 0;\n  border-radius: 8px;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n}\n\n#greeting {\n  cursor: pointer;\n  border: 2px solid #e0e0e0;\n  transition: all 0.3s ease;\n}\n\n#greeting:hover {\n  border-color: #007bff;\n  transform: translateY(-2px);\n  box-shadow: 0 4px 8px rgba(0,0,0,0.15);\n}\n\n.counter {\n  font-weight: bold;\n  color: #28a745;\n}",
+          "script.js": "let clickCount = 0;\nconst greetingParagraph = document.getElementById('greeting');\nconst countSpan = document.getElementById('count');\n\nconst messages = [\n  'Click me to change this paragraph!',\n  'Great job! You clicked me!',\n  'Another click! Paragraphs can be interactive!',\n  'Keep clicking to see more messages!',\n  'HTML paragraphs are the foundation of web content!'\n];\n\ngreetingParagraph.addEventListener('click', function() {\n  clickCount++;\n  countSpan.textContent = clickCount;\n  \n  const messageIndex = clickCount % messages.length;\n  greetingParagraph.textContent = messages[messageIndex];\n});"
+        },
+        "explanation": "This advanced approach demonstrates how HTML paragraphs can become interactive elements using JavaScript. It shows that even basic HTML elements can be enhanced with dynamic behavior. Use this approach when you want to explore how HTML, CSS, and JavaScript work together to create engaging user experiences, though it goes beyond basic paragraph usage."
+      }
+    ]
+  },
+  {
+    "id": "l1-20-form-fieldset-legend",
+    "title": "Form: Fieldset + Legend",
+    "description": "HTML: Form: Fieldset + Legend",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "tests": [
+      {
+        "id": "body",
+        "code": "!!document.querySelector('body')",
+        "label": "Has element: body"
+      }
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "realWorldContext": "This skill is fundamental to web development and you'll use it frequently in real projects.",
+    "alternativeSolutions": [
+      {
+        "label": "Basic Solution",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+          "style.css": "",
+          "script.js": ""
+        },
+        "explanation": "A straightforward approach that meets the requirements."
+      }
+    ]
+  },
+  {
+    "id": "l1-21-form-radio",
+    "title": "Form: Radio",
+    "description": "In this challenge, you'll create a form with radio button inputs - one of the most fundamental interactive elements in web development! Radio buttons are perfect when you need users to select exactly one option from a group of choices. You'll learn how to structure radio buttons properly using HTML form elements, group them together so only one can be selected at a time, and make them accessible with proper labeling. This is your introduction to collecting user input in a structured, user-friendly way that follows web standards.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "tests": [
+      {
+        "id": "body",
+        "code": "!!document.querySelector('body')",
+        "label": "Has element: body"
+      }
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "realWorldContext": "Radio buttons are everywhere on the web! You'll find them in survey forms asking for your age range, e-commerce sites where you select shipping options, account registration pages where you choose your preferred contact method, and settings panels where you pick a theme or language. Major sites like Amazon use radio buttons for delivery options, Google Forms uses them for multiple-choice questions, and streaming services like Netflix use them in their preference settings. Understanding radio buttons is essential because they're the go-to solution whenever you need users to make a single choice from multiple options - it's much more intuitive than dropdown menus for 2-5 options.",
+    "alternativeSolutions": [
+      {
+        "label": "Semantic Form Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title><link rel=\"stylesheet\" href=\"style.css\"></head>\n<body>\n  <form>\n    <fieldset>\n      <legend>お好みの飲み物を選択してください</legend>\n      \n      <div class=\"radio-group\">\n        <input type=\"radio\" id=\"coffee\" name=\"drink\" value=\"coffee\">\n        <label for=\"coffee\">コーヒー</label>\n      </div>\n      \n      <div class=\"radio-group\">\n        <input type=\"radio\" id=\"tea\" name=\"drink\" value=\"tea\">\n        <label for=\"tea\">紅茶</label>\n      </div>\n      \n      <div class=\"radio-group\">\n        <input type=\"radio\" id=\"juice\" name=\"drink\" value=\"juice\">\n        <label for=\"juice\">ジュース</label>\n      </div>\n    </fieldset>\n  </form>\n</body></html>",
+          "style.css": "body {\n  font-family: 'Hiragino Sans', sans-serif;\n  padding: 20px;\n  background-color: #f5f5f5;\n}\n\nfieldset {\n  border: 2px solid #ddd;\n  border-radius: 8px;\n  padding: 20px;\n  background: white;\n  max-width: 400px;\n}\n\nlegend {\n  font-weight: bold;\n  padding: 0 10px;\n  color: #333;\n}\n\n.radio-group {\n  margin: 15px 0;\n  display: flex;\n  align-items: center;\n}\n\ninput[type=\"radio\"] {\n  margin-right: 10px;\n  transform: scale(1.2);\n}\n\nlabel {\n  cursor: pointer;\n  font-size: 16px;\n  color: #555;\n}\n\nlabel:hover {\n  color: #007bff;\n}",
+          "script.js": ""
+        },
+        "explanation": "This approach uses semantic HTML with proper form structure including fieldset and legend elements. It's the most accessible and screen-reader friendly option, clearly grouping related radio buttons and providing context about what the user is selecting."
+      },
+      {
+        "label": "Minimal Interactive Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title><link rel=\"stylesheet\" href=\"style.css\"></head>\n<body>\n  <div class=\"container\">\n    <h3>サイズを選択:</h3>\n    \n    <label class=\"radio-option\">\n      <input type=\"radio\" name=\"size\" value=\"small\">\n      <span class=\"radio-text\">S - 小</span>\n    </label>\n    \n    <label class=\"radio-option\">\n      <input type=\"radio\" name=\"size\" value=\"medium\" checked>\n      <span class=\"radio-text\">M - 中</span>\n    </label>\n    \n    <label class=\"radio-option\">\n      <input type=\"radio\" name=\"size\" value=\"large\">\n      <span class=\"radio-text\">L - 大</span>\n    </label>\n    \n    <div id=\"selection\"></div>\n  </div>\n  <script src=\"script.js\"></script>\n</body></html>",
+          "style.css": "body {\n  font-family: 'Hiragino Sans', sans-serif;\n  margin: 0;\n  padding: 30px;\n  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n  min-height: 100vh;\n}\n\n.container {\n  background: white;\n  padding: 30px;\n  border-radius: 12px;\n  box-shadow: 0 8px 25px rgba(0,0,0,0.15);\n  max-width: 300px;\n  margin: 0 auto;\n}\n\nh3 {\n  margin: 0 0 20px 0;\n  color: #333;\n  text-align: center;\n}\n\n.radio-option {\n  display: block;\n  padding: 12px 15px;\n  margin: 8px 0;\n  border: 2px solid #e0e0e0;\n  border-radius: 8px;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n\n.radio-option:hover {\n  border-color: #667eea;\n  background-color: #f8f9ff;\n}\n\n.radio-option input {\n  margin-right: 10px;\n}\n\n.radio-option:has(input:checked) {\n  border-color: #667eea;\n  background-color: #667eea;\n  color: white;\n}\n\n#selection {\n  margin-top: 20px;\n  padding: 10px;\n  text-align: center;\n  font-weight: bold;\n  color: #667eea;\n}",
+          "script.js": "document.addEventListener('DOMContentLoaded', function() {\n  const radios = document.querySelectorAll('input[name=\"size\"]');\n  const selectionDiv = document.getElementById('selection');\n  \n  function updateSelection() {\n    const selected = document.querySelector('input[name=\"size\"]:checked');\n    if (selected) {\n      const sizeMap = {\n        'small': 'Sサイズが選択されました',\n        'medium': 'Mサイズが選択されました', \n        'large': 'Lサイズが選択されました'\n      };\n      selectionDiv.textContent = sizeMap[selected.value];\n    }\n  }\n  \n  radios.forEach(radio => {\n    radio.addEventListener('change', updateSelection);\n  });\n  \n  // Initialize with default selection\n  updateSelection();\n});"
+        },
+        "explanation": "This approach focuses on visual appeal and interactivity. It uses modern CSS features like :has() selector for styling and JavaScript to provide immediate feedback. Perfect when you want a more engaging user experience with real-time updates."
+      },
+      {
+        "label": "Custom Styled Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title><link rel=\"stylesheet\" href=\"style.css\"></head>\n<body>\n  <div class=\"quiz-container\">\n    <h2>質問: 好きな季節は？</h2>\n    \n    <form class=\"custom-radio-form\">\n      <div class=\"radio-wrapper\">\n        <input type=\"radio\" id=\"spring\" name=\"season\" value=\"spring\">\n        <label for=\"spring\" class=\"custom-radio\">\n          <span class=\"radio-button\"></span>\n          <span class=\"radio-label\">🌸 春</span>\n        </label>\n      </div>\n      \n      <div class=\"radio-wrapper\">\n        <input type=\"radio\" id=\"summer\" name=\"season\" value=\"summer\">\n        <label for=\"summer\" class=\"custom-radio\">\n          <span class=\"radio-button\"></span>\n          <span class=\"radio-label\">☀️ 夏</span>\n        </label>\n      </div>\n      \n      <div class=\"radio-wrapper\">\n        <input type=\"radio\" id=\"autumn\" name=\"season\" value=\"autumn\">\n        <label for=\"autumn\" class=\"custom-radio\">\n          <span class=\"radio-button\"></span>\n          <span class=\"radio-label\">🍂 秋</span>\n        </label>\n      </div>\n      \n      <div class=\"radio-wrapper\">\n        <input type=\"radio\" id=\"winter\" name=\"season\" value=\"winter\">\n        <label for=\"winter\" class=\"custom-radio\">\n          <span class=\"radio-button\"></span>\n          <span class=\"radio-label\">❄️ 冬</span>\n        </label>\n      </div>\n    </form>\n  </div>\n</body></html>",
+          "style.css": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  font-family: 'Hiragino Sans', sans-serif;\n  margin: 0;\n  padding: 20px;\n  background-color: #f0f2f5;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n}\n\n.quiz-container {\n  background: white;\n  padding: 40px;\n  border-radius: 16px;\n  box-shadow: 0 10px 30px rgba(0,0,0,0.1);\n  max-width: 400px;\n  width: 100%;\n}\n\nh2 {\n  text-align: center;\n  margin: 0 0 30px 0;\n  color: #2c3e50;\n  font-size: 24px;\n}\n\n.radio-wrapper {\n  margin: 16px 0;\n}\n\n.custom-radio {\n  display: flex;\n  align-items: center;\n  padding: 16px 20px;\n  border: 2px solid #e1e8ed;\n  border-radius: 12px;\n  cursor: pointer;\n  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);\n  background: #fafbfc;\n}\n\n.custom-radio:hover {\n  border-color: #3498db;\n  background: #f8fbff;\n  transform: translateY(-2px);\n  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);\n}\n\n.radio-button {\n  width: 20px;\n  height: 20px;\n  border: 2px solid #bdc3c7;\n  border-radius: 50%;\n  margin-right: 15px;\n  position: relative;\n  transition: all 0.3s ease;\n}\n\n.radio-button::after {\n  content: '';\n  width: 10px;\n  height: 10px;\n  border-radius: 50%;\n  background: #3498db;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%) scale(0);\n  transition: transform 0.3s ease;\n}\n\n.radio-label {\n  font-size: 18px;\n  color: #2c3e50;\n  font-weight: 500;\n}\n\n/* Hide default radio button */\ninput[type=\"radio\"] {\n  position: absolute;\n  opacity: 0;\n  pointer-events: none;\n}\n\n/* Checked state */\ninput[type=\"radio\"]:checked + .custom-radio {\n  border-color: #3498db;\n  background: linear-gradient(135deg, #3498db, #2980b9);\n  color: white;\n}\n\ninput[type=\"radio\"]:checked + .custom-radio .radio-button {\n  border-color: white;\n  background: rgba(255,255,255,0.2);\n}\n\ninput[type=\"radio\"]:checked + .custom-radio .radio-button::after {\n  background: white;\n  transform: translate(-50%, -50%) scale(1);\n}\n\ninput[type=\"radio\"]:checked + .custom-radio .radio-label {\n  color: white;\n}",
+          "script.js": ""
+        },
+        "explanation": "This approach completely customizes the radio button appearance using CSS, hiding the default browser styling and creating a beautiful, branded experience. It's ideal when you need radio buttons that match a specific design system or want to create a more polished, professional look."
+      }
+    ]
+  },
+  {
+    "id": "l1-22-form-checkbox",
+    "title": "Form: Checkbox",
+    "description": "In this challenge, you'll create your first interactive form element: a checkbox! Checkboxes are one of the most fundamental form controls in web development, allowing users to select multiple options from a list or toggle settings on and off. You'll learn how to create checkboxes using HTML's `<input type=\"checkbox\">` element and understand the essential attributes that make them functional and accessible.\n\nThis might seem simple, but mastering checkboxes is crucial for building user-friendly forms. You'll discover how to properly label checkboxes, group related options together, and set default values. By the end of this challenge, you'll understand the building blocks that power everything from newsletter signup forms to complex multi-step surveys.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "tests": [
+      {
+        "id": "body",
+        "code": "!!document.querySelector('body')",
+        "label": "Has element: body"
+      }
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+      "style.css": "",
+      "script.js": ""
+    },
+    "realWorldContext": "Checkboxes are everywhere on the modern web! Every time you agree to terms and conditions, select your interests on a social media platform, or choose multiple filters on an e-commerce site like Amazon, you're interacting with checkboxes. They're essential for any form where users need to make multiple selections – think about signing up for a newsletter where you might choose topics like 'Tech News,' 'Product Updates,' and 'Special Offers.'\n\nMajor websites rely heavily on checkboxes for user preferences, shopping carts (selecting multiple items), and settings pages. Understanding how to create accessible, well-labeled checkboxes is fundamental to creating forms that real users can navigate easily, including those using screen readers or other assistive technologies.",
+    "alternativeSolutions": [
+      {
+        "label": "Basic Checkbox Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <form>\n    <h2>Choose your interests:</h2>\n    <div>\n      <input type=\"checkbox\" id=\"tech\" name=\"interests\" value=\"technology\">\n      <label for=\"tech\">Technology</label>\n    </div>\n    <div>\n      <input type=\"checkbox\" id=\"sports\" name=\"interests\" value=\"sports\">\n      <label for=\"sports\">Sports</label>\n    </div>\n    <div>\n      <input type=\"checkbox\" id=\"music\" name=\"interests\" value=\"music\" checked>\n      <label for=\"music\">Music</label>\n    </div>\n  </form>\n</body>\n</html>",
+          "style.css": "body {\n  font-family: Arial, sans-serif;\n  max-width: 600px;\n  margin: 0 auto;\n  padding: 20px;\n}\n\nform {\n  background: #f9f9f9;\n  padding: 20px;\n  border-radius: 8px;\n}\n\nh2 {\n  color: #333;\n  margin-bottom: 20px;\n}\n\ndiv {\n  margin-bottom: 15px;\n}\n\ninput[type=\"checkbox\"] {\n  margin-right: 10px;\n  transform: scale(1.2);\n}\n\nlabel {\n  font-size: 16px;\n  cursor: pointer;\n}",
+          "script.js": ""
+        },
+        "explanation": "This approach uses the standard HTML checkbox pattern with proper labels and semantic structure. Each checkbox has a unique ID that matches its label's 'for' attribute, ensuring accessibility. The 'name' attribute groups related checkboxes together for form submission. This is perfect for most basic checkbox needs and follows web standards."
+      },
+      {
+        "label": "Fieldset Grouped Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <form>\n    <fieldset>\n      <legend>Newsletter Preferences</legend>\n      <div class=\"checkbox-group\">\n        <input type=\"checkbox\" id=\"weekly\" name=\"newsletter\" value=\"weekly\">\n        <label for=\"weekly\">Weekly Digest</label>\n      </div>\n      <div class=\"checkbox-group\">\n        <input type=\"checkbox\" id=\"breaking\" name=\"newsletter\" value=\"breaking\" checked>\n        <label for=\"breaking\">Breaking News</label>\n      </div>\n      <div class=\"checkbox-group\">\n        <input type=\"checkbox\" id=\"promotions\" name=\"newsletter\" value=\"promotions\">\n        <label for=\"promotions\">Special Promotions</label>\n      </div>\n    </fieldset>\n  </form>\n</body>\n</html>",
+          "style.css": "body {\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n  max-width: 500px;\n  margin: 0 auto;\n  padding: 20px;\n  background: #f5f5f5;\n}\n\nfieldset {\n  border: 2px solid #ddd;\n  border-radius: 10px;\n  padding: 20px;\n  background: white;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.1);\n}\n\nlegend {\n  font-weight: bold;\n  font-size: 18px;\n  color: #2c3e50;\n  padding: 0 10px;\n}\n\n.checkbox-group {\n  margin: 15px 0;\n  display: flex;\n  align-items: center;\n}\n\ninput[type=\"checkbox\"] {\n  width: 18px;\n  height: 18px;\n  margin-right: 12px;\n  accent-color: #3498db;\n}\n\nlabel {\n  font-size: 16px;\n  cursor: pointer;\n  color: #34495e;\n}",
+          "script.js": ""
+        },
+        "explanation": "This approach uses the semantic `<fieldset>` and `<legend>` elements to group related checkboxes together. This is especially important for accessibility as screen readers can announce the group context. Use this pattern when you have multiple related checkbox groups or when you want to emphasize that checkboxes belong to a specific category."
+      },
+      {
+        "label": "Interactive JavaScript Approach",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <form>\n    <h2>Select Your Skills</h2>\n    <div class=\"checkbox-container\">\n      <div class=\"checkbox-item\">\n        <input type=\"checkbox\" id=\"html\" name=\"skills\" value=\"html\">\n        <label for=\"html\">HTML</label>\n      </div>\n      <div class=\"checkbox-item\">\n        <input type=\"checkbox\" id=\"css\" name=\"skills\" value=\"css\">\n        <label for=\"css\">CSS</label>\n      </div>\n      <div class=\"checkbox-item\">\n        <input type=\"checkbox\" id=\"js\" name=\"skills\" value=\"javascript\">\n        <label for=\"js\">JavaScript</label>\n      </div>\n    </div>\n    <div class=\"controls\">\n      <button type=\"button\" id=\"selectAll\">Select All</button>\n      <button type=\"button\" id=\"clearAll\">Clear All</button>\n    </div>\n    <div id=\"result\"></div>\n  </form>\n</body>\n</html>",
+          "style.css": "body {\n  font-family: 'Arial', sans-serif;\n  max-width: 600px;\n  margin: 0 auto;\n  padding: 20px;\n  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n  color: white;\n  min-height: 100vh;\n}\n\nform {\n  background: rgba(255, 255, 255, 0.1);\n  backdrop-filter: blur(10px);\n  padding: 30px;\n  border-radius: 15px;\n  border: 1px solid rgba(255, 255, 255, 0.2);\n}\n\nh2 {\n  text-align: center;\n  margin-bottom: 25px;\n  font-size: 24px;\n}\n\n.checkbox-container {\n  margin-bottom: 20px;\n}\n\n.checkbox-item {\n  margin: 15px 0;\n  padding: 10px;\n  background: rgba(255, 255, 255, 0.05);\n  border-radius: 8px;\n  transition: all 0.3s ease;\n}\n\n.checkbox-item:hover {\n  background: rgba(255, 255, 255, 0.1);\n  transform: translateX(5px);\n}\n\ninput[type=\"checkbox\"] {\n  width: 20px;\n  height: 20px;\n  margin-right: 15px;\n  accent-color: #4CAF50;\n}\n\nlabel {\n  font-size: 18px;\n  cursor: pointer;\n}\n\n.controls {\n  text-align: center;\n  margin: 20px 0;\n}\n\nbutton {\n  background: #4CAF50;\n  color: white;\n  border: none;\n  padding: 10px 20px;\n  margin: 0 10px;\n  border-radius: 25px;\n  cursor: pointer;\n  font-size: 16px;\n  transition: all 0.3s ease;\n}\n\nbutton:hover {\n  background: #45a049;\n  transform: translateY(-2px);\n  box-shadow: 0 5px 15px rgba(0,0,0,0.2);\n}\n\n#result {\n  margin-top: 20px;\n  padding: 15px;\n  background: rgba(255, 255, 255, 0.1);\n  border-radius: 8px;\n  min-height: 20px;\n  font-weight: bold;\n}",
+          "script.js": "document.addEventListener('DOMContentLoaded', function() {\n    const checkboxes = document.querySelectorAll('input[name=\"skills\"]');\n    const selectAllBtn = document.getElementById('selectAll');\n    const clearAllBtn = document.getElementById('clearAll');\n    const result = document.getElementById('result');\n\n    // Function to update the result display\n    function updateResult() {\n        const selected = Array.from(checkboxes)\n            .filter(cb => cb.checked)\n            .map(cb => cb.value);\n        \n        if (selected.length === 0) {\n            result.textContent = 'No skills selected';\n        } else {\n            result.textContent = `Selected skills: ${selected.join(', ')}`;\n        }\n    }\n\n    // Add event listeners to all checkboxes\n    checkboxes.forEach(checkbox => {\n        checkbox.addEventListener('change', updateResult);\n    });\n\n    // Select all functionality\n    selectAllBtn.addEventListener('click', function() {\n        checkboxes.forEach(checkbox => {\n            checkbox.checked = true;\n        });\n        updateResult();\n    });\n\n    // Clear all functionality\n    clearAllBtn.addEventListener('click', function() {\n        checkboxes.forEach(checkbox => {\n            checkbox.checked = false;\n        });\n        updateResult();\n    });\n\n    // Initialize result display\n    updateResult();\n});"
+        },
+        "explanation": "This approach adds JavaScript interactivity to enhance the user experience. It includes 'Select All' and 'Clear All' buttons, plus real-time feedback showing which options are selected. This pattern is great for forms with many checkboxes or when you want to provide immediate visual feedback. It's commonly used in admin panels, survey forms, and settings pages."
+      }
+    ]
+  }
+]

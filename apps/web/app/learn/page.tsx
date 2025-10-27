@@ -7,6 +7,8 @@ import { CodeEditor } from "../components/CodeEditor";
 import { PreviewSandbox } from "../components/PreviewSandbox";
 import { TestPanel } from "../components/TestPanel";
 import { SolutionModal } from "../components/SolutionModal";
+import { ChallengeDetails } from "../components/ChallengeDetails";
+import { AITutorHelper } from "../components/AITutorHelper";
 import { makeHostCapabilities } from "../lib/host";
 import type { HostCapabilities } from "@aict/services/orchestrator";
 
@@ -16,8 +18,17 @@ interface Task {
   title: string;
   description: string;
   scaffold: Record<string, string>;
-  tests: Array<{ id: string; code: string }>;
+  tests: Array<{ id: string; code: string; label?: string }>;
   solution?: Record<string, string>;
+  hints?: Array<{ level: number; text: string }>;
+  // Enhanced educational content:
+  detailedDescription?: string;
+  realWorldContext?: string;
+  alternativeSolutions?: Array<{
+    label: string;
+    files: Record<string, string>;
+    explanation: string;
+  }>;
   // Optional fields when coming from DB/local JSON:
   difficulty?: number;
   category?: string | null;
@@ -39,6 +50,7 @@ export default function LearnPage() {
   // ---------- Solution modal state ----------
   const [showSolutionModal, setShowSolutionModal] = useState(false);
 
+
   // ---------- Refs for orchestrator ----------
   const currentTaskRef = useRef<Task | null>(null);
   const editorFilesRef = useRef<Record<string, string>>({});
@@ -57,7 +69,7 @@ export default function LearnPage() {
     loadInitialTask();
   }, []);
 
-  // ---------- When level changes: load 15 tasks for that level ----------
+  // ---------- When level changes: load 40 tasks for that level ----------
   useEffect(() => {
     loadTasksByLevel(difficulty);
   }, [difficulty]);
@@ -84,10 +96,10 @@ export default function LearnPage() {
     setActivePath("index.html");
   };
 
-  // ---------- NEW: fetch tasks of a given level from /api/tasks ----------
+  // ---------- Fetch tasks of a given level from /api/tasks (40 per level) ----------
   async function loadTasksByLevel(level: number) {
     try {
-      const res = await fetch(`/api/tasks?level=${level}&limit=15`, {
+      const res = await fetch(`/api/tasks?level=${level}&limit=40`, {
         cache: "no-store",
       });
       if (!res.ok) throw new Error(`GET /api/tasks failed: ${res.status}`);
@@ -178,7 +190,10 @@ export default function LearnPage() {
 
   // ---------- Model context ----------
   const buildContext = () => ({
-    task: currentTask,
+    task: {
+      ...currentTask,
+      hints: currentTask?.hints || [],
+    },
     test_result: testResult,
     editor: {
       open_path: activePath,
@@ -206,6 +221,25 @@ export default function LearnPage() {
     }
   };
 
+  // ---------- AI Tutor helper methods ----------
+  const handleAskForHint = (level: 1 | 2 | 3) => {
+    // These quick actions help users know what to ask in the chat
+    // The AI tutor will recognize these patterns and provide appropriate hints
+    console.log(`User requested hint level ${level}`);
+    // In a future enhancement, we could programmatically send this to chat
+    // For now, these buttons educate users on how to interact with the AI
+  };
+
+  const handleAskQuestion = (question: string) => {
+    console.log(`User wants to ask: ${question}`);
+    // Guide users to type similar questions in the chat panel
+  };
+
+  const handleApplySolution = (files: Record<string, string>) => {
+    setEditorFiles(files);
+    setRefreshTrigger(prev => prev + 1);
+  };
+
   return (
     <div className="h-screen flex flex-col bg-gray-100">
       {/* Header */}
@@ -218,20 +252,19 @@ export default function LearnPage() {
             )}
           </div>
 
-          {/* NEW: Level + Challenge pickers */}
+          {/* Level + Challenge pickers */}
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2">
-              <label className="text-sm text-gray-600">Level</label>
+              <label className="text-sm text-gray-600 font-medium">Level</label>
               <select
                 value={difficulty}
                 onChange={(e) => setDifficulty(parseInt(e.target.value))}
-                className="border border-gray-300 rounded-md p-1 text-sm"
+                className="border border-gray-300 rounded-md px-3 py-1.5 text-sm font-medium bg-white hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((lvl) => (
-                  <option key={lvl} value={lvl}>
-                    Level {lvl}
-                  </option>
-                ))}
+                <option value={1}>Level 1: HTML</option>
+                <option value={2}>Level 2: HTML + CSS</option>
+                <option value={3}>Level 3: JavaScript</option>
+                <option value={4}>Level 4: Full Stack</option>
               </select>
             </div>
 
@@ -283,47 +316,61 @@ export default function LearnPage() {
 
       {/* Main Layout */}
       <div className="flex-1 flex overflow-hidden">
-        {/* Left: Chat */}
-        <div className="w-96 border-r border-gray-200">
-          <ChatPanel
-            host={hostCapabilities}
-            contextBuilder={buildContext}
-            onTestResult={setTestResult}
-          />
-        </div>
-
-        {/* Middle: Editor + Preview */}
-        <div className="flex-1 flex flex-col">
-          {/* Task Description */}
-          {currentTask && (
-            <div className="bg-blue-50 border-b border-blue-200 px-6 py-3">
-              <p className="text-sm text-blue-900">{currentTask.description}</p>
-            </div>
-          )}
-
-          {/* Split: Editor | Preview */}
-          <div className="flex-1 flex overflow-hidden">
-            <div className="flex-1 border-r border-gray-200">
-              <CodeEditor
-                files={editorFiles}
-                onFilesChange={setEditorFiles}
-                activePath={activePath}
-                onActivePathChange={setActivePath}
+        {/* Left Sidebar: Challenge Details & AI Helper */}
+        <div className="w-96 border-r border-gray-200 flex flex-col">
+          {/* Challenge Details - Takes most space */}
+          <div className="flex-1 overflow-hidden">
+            {currentTask && (
+              <ChallengeDetails
+                task={currentTask}
+                onApplySolution={handleApplySolution}
               />
-            </div>
-            <div className="flex-1">
-              <PreviewSandbox files={editorFiles} refreshTrigger={refreshTrigger} />
-            </div>
+            )}
+          </div>
+
+          {/* AI Tutor Helper - Fixed at bottom */}
+          <div className="border-t border-gray-200 p-4 bg-white">
+            <AITutorHelper
+              onAskForHint={handleAskForHint}
+              onAskQuestion={handleAskQuestion}
+            />
           </div>
         </div>
 
-        {/* Right: Tests */}
-        <div className="w-80 border-l border-gray-200">
-          <TestPanel
-            result={testResult}
-            onRunTests={handleRunTests}
-            isRunning={isTestRunning}
-          />
+        {/* Middle: Editor + Preview */}
+        <div className="flex-1 flex overflow-hidden">
+          <div className="flex-1 border-r border-gray-200">
+            <CodeEditor
+              files={editorFiles}
+              onFilesChange={setEditorFiles}
+              activePath={activePath}
+              onActivePathChange={setActivePath}
+            />
+          </div>
+          <div className="flex-1">
+            <PreviewSandbox files={editorFiles} refreshTrigger={refreshTrigger} />
+          </div>
+        </div>
+
+        {/* Right: Chat & Tests */}
+        <div className="w-96 border-l border-gray-200 flex flex-col">
+          {/* Chat Panel - Top half */}
+          <div className="flex-1 border-b border-gray-200 overflow-hidden">
+            <ChatPanel
+              host={hostCapabilities}
+              contextBuilder={buildContext}
+              onTestResult={setTestResult}
+            />
+          </div>
+
+          {/* Test Panel - Bottom half */}
+          <div className="flex-1 overflow-hidden">
+            <TestPanel
+              result={testResult}
+              onRunTests={handleRunTests}
+              isRunning={isTestRunning}
+            />
+          </div>
         </div>
       </div>
 
