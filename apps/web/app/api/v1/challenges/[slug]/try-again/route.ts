@@ -2,7 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { prisma } from "@/app/lib/server-db";
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY! });
-const MODEL = process.env.MODEL_FAST || "claude-3-haiku-20240307";
+const MODEL = process.env.MODEL_FAST || "claude-haiku-4-5";
 
 const SYS = `あなたは課題作成AIです。同じ学習目標を保ちつつ、文言や識別子を小さく変えた別バージョンを作成します。
 制約:

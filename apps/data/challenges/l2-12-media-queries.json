@@ -1,0 +1,62 @@
+{
+  "level": 2,
+  "slug": "l2-12-media-queries",
+  "title": "Media Queries",
+  "objective": "HTML+CSS: Media Queries",
+  "passCriteria": "Layout/structure prepared; selectors present.",
+  "starter": {
+    "html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+    "css": "/* styles.css */"
+  },
+  "tests": [
+    {
+      "id": "body",
+      "code": "!!document.querySelector(\"body\")",
+      "label": "Has element: body"
+    },
+    {
+      "id": "style",
+      "code": "!!document.querySelector(\"style, link[rel=stylesheet]\")",
+      "label": "Has element: style, link[rel=stylesheet]"
+    }
+  ],
+  "tags": [
+    "html",
+    "css"
+  ],
+  "solutions": [
+    {
+      "label": "Minimal Solution",
+      "files": {
+        "html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+        "css": "/* styles.css */",
+        "js": ""
+      },
+      "notes": "Simplest implementation meeting the requirements."
+    },
+    {
+      "label": "Styled Version",
+      "files": {
+        "html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+        "css": "body {\n  font-family: system-ui, -apple-system, sans-serif;\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 2rem;\n  line-height: 1.6;\n  color: #333;\n}\n\n\n\n\n\n\n\n",
+        "js": ""
+      },
+      "notes": "Professional styling with modern CSS."
+    }
+  ],
+  "hints": [
+    {
+      "level": 1,
+      "text": "\u307e\u305a\u3001\u8981\u7d20\u3084API\u306e\u300e\u540d\u524d\u300f\u306b\u6ce8\u76ee\u3057\u3066\u3001\u8db3\u308a\u306a\u3044\u3082\u306e\u3092\u6d17\u3044\u51fa\u3057\u307e\u3057\u3087\u3046\u3002"
+    },
+    {
+      "level": 2,
+      "text": "\u5408\u5426\u6761\u4ef6\u3092\u6e80\u305f\u3059\u305f\u3081\u306e\u6700\u5c0f\u69cb\u6210\u3092\u5217\u6319\u3057\u3066\u304b\u3089\u30011\u3064\u305a\u3064\u8ffd\u52a0\u3057\u307e\u3057\u3087\u3046\u3002"
+    },
+    {
+      "level": 3,
+      "text": "\u5177\u4f53\u7684\u306a\u30bf\u30b0\u540d/\u30e1\u30bd\u30c3\u30c9\u540d\u3092\u78ba\u8a8d\u3057\u3066\u3001\u5bfe\u5fdc\u3059\u308b\u5c5e\u6027\u3084\u5f15\u6570\u3092\u88dc\u3063\u3066\u304f\u3060\u3055\u3044\u3002"
+    }
+  ],
+  "paramsSchema": {}
+}

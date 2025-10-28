@@ -1,0 +1,53 @@
+{
+  "level": 2,
+  "slug": "l2-35-breadcrumb",
+  "title": "Breadcrumb",
+  "objective": "HTML+CSS: Breadcrumb",
+  "passCriteria": "Layout/structure prepared; selectors present.",
+  "starter": {
+    "html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+    "css": "/* styles.css */"
+  },
+  "tests": [
+    {
+      "id": "body",
+      "type": "dom-assert",
+      "selector": "body"
+    },
+    {
+      "id": "style",
+      "type": "dom-assert",
+      "selector": "style, link[rel=stylesheet]"
+    }
+  ],
+  "tags": [
+    "html",
+    "css"
+  ],
+  "solutions": [
+    {
+      "label": "Minimal solution",
+      "files": {
+        "html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+        "css": "/* styles.css */",
+        "js": ""
+      },
+      "notes": "One of several correct answers."
+    }
+  ],
+  "hints": [
+    {
+      "level": 1,
+      "text": "まず、要素やAPIの『名前』に注目して、足りないものを洗い出しましょう。"
+    },
+    {
+      "level": 2,
+      "text": "合否条件を満たすための最小構成を列挙してから、1つずつ追加しましょう。"
+    },
+    {
+      "level": 3,
+      "text": "具体的なタグ名/メソッド名を確認して、対応する属性や引数を補ってください。"
+    }
+  ],
+  "paramsSchema": {}
+}

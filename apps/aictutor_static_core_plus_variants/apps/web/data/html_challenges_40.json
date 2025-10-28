@@ -1,0 +1,1762 @@
+[
+  {
+    "id": "html-001",
+    "title": "Headings 101",
+    "description": "Create a document with one <h1> and two <h2> elements describing a page title and two sections.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Headings 101</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add headings here -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelectorAll('h1').length === 1) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (document.querySelectorAll('h2').length === 2) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\ntry {\n  if (document.querySelector('h1')?.textContent.trim().length > 0) { passed.push(\"a03\"); }\n  else { failed.push(\"a03\"); }\n} catch (e) { failed.push(\"a03\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <h1> for the main title and <h2> for subsections."
+      },
+      {
+        "level": 2,
+        "text": "You need exactly one h1 and two h2."
+      },
+      {
+        "level": 3,
+        "text": "Copy: <h1>My Web Page</h1><h2>Introduction</h2><h2>Details</h2>"
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Headings 101</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <h1>My Web Page</h1>\n<h2>Introduction</h2>\n<h2>Details</h2>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-002",
+    "title": "Paragraphs & Line Breaks",
+    "description": "Add two paragraphs. The first should contain a manual line break using <br>.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Paragraphs & Line Breaks</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add two paragraphs -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelectorAll('p').length === 2) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (document.querySelectorAll('p')[0]?.innerHTML.includes('<br')) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <p> for paragraphs."
+      },
+      {
+        "level": 2,
+        "text": "Use <br> for a manual line break in the first paragraph."
+      },
+      {
+        "level": 3,
+        "text": "Create two <p> elements; add a <br> in the first."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Paragraphs & Line Breaks</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <p>Hello line one<br>and line two.</p>\n<p>This is another paragraph.</p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-003",
+    "title": "Links & Targets",
+    "description": "Create a link to https://example.com that opens in a new tab and uses rel='noopener'.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Links & Targets</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add a link -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('a[href=\"https://example.com\"]')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (document.querySelector('a[href=\"https://example.com\"]').target === '_blank') { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\ntry {\n  if (document.querySelector('a[href=\"https://example.com\"]').rel.includes('noopener')) { passed.push(\"a03\"); }\n  else { failed.push(\"a03\"); }\n} catch (e) { failed.push(\"a03\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <a href='...'>."
+      },
+      {
+        "level": 2,
+        "text": "To open in new tab, add target='_blank'."
+      },
+      {
+        "level": 3,
+        "text": "Also add rel='noopener' for security."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Links & Targets</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <a href=\"https://example.com\" target=\"_blank\" rel=\"noopener\">Visit Example</a>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-004",
+    "title": "Images & Alt Text",
+    "description": "Insert an image 'cat.jpg' with an alt describing the cat.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Images & Alt Text</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add an image -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('img[src=\"cat.jpg\"]')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (document.querySelector('img[src=\"cat.jpg\"]').getAttribute('alt')?.trim().length > 0) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <img src='...' alt='...'>."
+      },
+      {
+        "level": 2,
+        "text": "Alt text should describe the image content."
+      },
+      {
+        "level": 3,
+        "text": "Example: <img src='cat.jpg' alt='A playful orange cat'>"
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Images & Alt Text</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <img src=\"cat.jpg\" alt=\"A playful orange cat\">\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-005",
+    "title": "Unordered Lists",
+    "description": "Create a bulleted list with three items: 'One', 'Two', 'Three'.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Unordered Lists</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add an unordered list -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelectorAll('ul li').length === 3) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (Array.from(document.querySelectorAll('ul li')).map(li=>li.textContent.trim()).join(',') === 'One,Two,Three') { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <ul> with nested <li>."
+      },
+      {
+        "level": 2,
+        "text": "Create exactly three items with provided text."
+      },
+      {
+        "level": 3,
+        "text": "Copy the list: <ul><li>One</li><li>Two</li><li>Three</li></ul>"
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Unordered Lists</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <ul><li>One</li><li>Two</li><li>Three</li></ul>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-006",
+    "title": "Ordered Lists",
+    "description": "Create a numbered list with items 'First', 'Second'.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Ordered Lists</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add an ordered list -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelectorAll('ol li').length === 2) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (Array.from(document.querySelectorAll('ol li')).map(li=>li.textContent.trim()).join(',') === 'First,Second') { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <ol> with <li>."
+      },
+      {
+        "level": 2,
+        "text": "Ensure two items only."
+      },
+      {
+        "level": 3,
+        "text": "<ol><li>First</li><li>Second</li></ol>"
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Ordered Lists</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <ol><li>First</li><li>Second</li></ol>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-007",
+    "title": "Description Lists",
+    "description": "Create a definition list with term 'HTML' and description 'Markup language'.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Description Lists</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add a description list -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('dl dt') && !!document.querySelector('dl dd')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (document.querySelector('dl dt')?.textContent.trim()==='HTML') { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\ntry {\n  if (document.querySelector('dl dd')?.textContent.trim()==='Markup language') { passed.push(\"a03\"); }\n  else { failed.push(\"a03\"); }\n} catch (e) { failed.push(\"a03\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <dl> with <dt> and <dd>."
+      },
+      {
+        "level": 2,
+        "text": "Place 'HTML' in dt and 'Markup language' in dd."
+      },
+      {
+        "level": 3,
+        "text": "Copy the example exactly."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Description Lists</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <dl><dt>HTML</dt><dd>Markup language</dd></dl>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-008",
+    "title": "Semantic Layout",
+    "description": "Add <header>, <nav>, <main>, and <footer> elements.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Semantic Layout</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Build semantic layout -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('header')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (!!document.querySelector('nav')) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\ntry {\n  if (!!document.querySelector('main')) { passed.push(\"a03\"); }\n  else { failed.push(\"a03\"); }\n} catch (e) { failed.push(\"a03\"); }\n\ntry {\n  if (!!document.querySelector('footer')) { passed.push(\"a04\"); }\n  else { failed.push(\"a04\"); }\n} catch (e) { failed.push(\"a04\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use the semantic tags directly."
+      },
+      {
+        "level": 2,
+        "text": "Include all four: header, nav, main, footer."
+      },
+      {
+        "level": 3,
+        "text": "Copy the minimal structure in the solution."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Semantic Layout</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <header>Site Header</header>\n<nav>Navigation</nav>\n<main>Main content</main>\n<footer>Footer</footer>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-009",
+    "title": "Figure & Figcaption",
+    "description": "Wrap an image inside <figure> with a <figcaption> describing it.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Figure & Figcaption</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add a figure with caption -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('figure img')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (!!document.querySelector('figure figcaption')) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\ntry {\n  if (document.querySelector('figure figcaption')?.textContent.trim().length>0) { passed.push(\"a03\"); }\n  else { failed.push(\"a03\"); }\n} catch (e) { failed.push(\"a03\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <figure> with nested <img> and <figcaption>."
+      },
+      {
+        "level": 2,
+        "text": "Include alt on the image and text in the caption."
+      },
+      {
+        "level": 3,
+        "text": "You can use 'diagram.png' and a simple sentence."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Figure & Figcaption</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <figure><img src=\"diagram.png\" alt=\"Architecture diagram\"><figcaption>System architecture diagram</figcaption></figure>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-010",
+    "title": "Simple Table",
+    "description": "Create a 2x2 table with headers 'A','B' and row '1','2'.",
+    "difficulty": 2,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Simple Table</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add a table -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('table thead th')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (document.querySelectorAll('table thead th').length===2) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\ntry {\n  if (Array.from(document.querySelectorAll('table thead th')).map(th=>th.textContent.trim()).join(',')==='A,B') { passed.push(\"a03\"); }\n  else { failed.push(\"a03\"); }\n} catch (e) { failed.push(\"a03\"); }\n\ntry {\n  if (Array.from(document.querySelectorAll('table tbody td')).map(td=>td.textContent.trim()).join(',')==='1,2') { passed.push(\"a04\"); }\n  else { failed.push(\"a04\"); }\n} catch (e) { failed.push(\"a04\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use thead/tbody/ tr/th/td."
+      },
+      {
+        "level": 2,
+        "text": "Two headers A,B and one row 1,2."
+      },
+      {
+        "level": 3,
+        "text": "Follow the exact skeleton in the prompt."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Simple Table</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <table><thead><tr><th>A</th><th>B</th></tr></thead><tbody><tr><td>1</td><td>2</td></tr></tbody></table>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-011",
+    "title": "Form Labels",
+    "description": "Create a form with a text input labeled 'Name'. The label should be explicitly associated.",
+    "difficulty": 2,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Form Labels</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add form with label -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('form label[for]')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (!!document.querySelector('form input#name')) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\ntry {\n  if (document.querySelector('label[for=\"name\"]')!=null) { passed.push(\"a03\"); }\n  else { failed.push(\"a03\"); }\n} catch (e) { failed.push(\"a03\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <label for=\"id\"> to connect to an input with matching id."
+      },
+      {
+        "level": 2,
+        "text": "Input type can be text."
+      },
+      {
+        "level": 3,
+        "text": "See example: label+input with id name."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Form Labels</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <form><label for=\"name\">Name</label><input id=\"name\" type=\"text\"></form>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-012",
+    "title": "Email Input",
+    "description": "Add an email input named 'email' that is required.",
+    "difficulty": 2,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Email Input</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add email input -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('input[type=\"email\"][name=\"email\"]')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (document.querySelector('input[type=\"email\"][name=\"email\"]').required === true) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use type='email' and name='email'."
+      },
+      {
+        "level": 2,
+        "text": "Add the required attribute."
+      },
+      {
+        "level": 3,
+        "text": "<input type='email' name='email' required>"
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Email Input</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <input type=\"email\" name=\"email\" required>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-013",
+    "title": "Fieldset & Legend",
+    "description": "Group two radio inputs under a fieldset with legend 'Size'.",
+    "difficulty": 2,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Fieldset & Legend</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add fieldset with legend and radios -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('fieldset legend')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (document.querySelector('fieldset legend')?.textContent.trim()==='Size') { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\ntry {\n  if (document.querySelectorAll('fieldset input[type=\"radio\"]').length===2) { passed.push(\"a03\"); }\n  else { failed.push(\"a03\"); }\n} catch (e) { failed.push(\"a03\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <fieldset><legend>..</legend>..</fieldset>."
+      },
+      {
+        "level": 2,
+        "text": "Include two radios sharing the same name."
+      },
+      {
+        "level": 3,
+        "text": "See example solution."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Fieldset & Legend</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <fieldset><legend>Size</legend><label><input type=\"radio\" name=\"size\" value=\"S\"> S</label><label><input type=\"radio\" name=\"size\" value=\"M\"> M</label></fieldset>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-014",
+    "title": "Select Menu",
+    "description": "Create a select named 'color' with options Red, Green, Blue.",
+    "difficulty": 2,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Select Menu</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add select menu -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('select[name=\"color\"]')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (document.querySelectorAll('select[name=\"color\"] option').length===3) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\ntry {\n  if (Array.from(document.querySelectorAll('select[name=\"color\"] option')).map(o=>o.textContent.trim()).join(',')==='Red,Green,Blue') { passed.push(\"a03\"); }\n  else { failed.push(\"a03\"); }\n} catch (e) { failed.push(\"a03\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <select> with nested <option> elements."
+      },
+      {
+        "level": 2,
+        "text": "Set name='color' and add three options."
+      },
+      {
+        "level": 3,
+        "text": "Copy the three options verbatim."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Select Menu</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <select name=\"color\"><option>Red</option><option>Green</option><option>Blue</option></select>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-015",
+    "title": "Textarea",
+    "description": "Add a textarea with placeholder 'Your message'.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Textarea</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add textarea -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('textarea[placeholder=\"Your message\"]')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <textarea> and set placeholder."
+      },
+      {
+        "level": 2,
+        "text": "No name required here."
+      },
+      {
+        "level": 3,
+        "text": "<textarea placeholder='Your message'></textarea>"
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Textarea</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <textarea placeholder=\"Your message\"></textarea>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-016",
+    "title": "Buttons & Types",
+    "description": "Add two buttons: one type='submit' and one type='button'.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Buttons & Types</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add two buttons -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelectorAll('button').length===2) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (document.querySelector('button[type=\"submit\"]')!=null) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\ntry {\n  if (document.querySelector('button[type=\"button\"]')!=null) { passed.push(\"a03\"); }\n  else { failed.push(\"a03\"); }\n} catch (e) { failed.push(\"a03\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use the button element."
+      },
+      {
+        "level": 2,
+        "text": "Set types explicitly."
+      },
+      {
+        "level": 3,
+        "text": "One submit, one button."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Buttons & Types</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <button type=\"submit\">Send</button><button type=\"button\">Click</button>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-017",
+    "title": "Metadata Tags",
+    "description": "Add a meta description with content 'Demo page'.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Metadata Tags</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <meta name=\"description\" content=\"\">\n</head>\n<body>\n  <!-- Add meta description in head -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelector('meta[name=\"description\"]').getAttribute('content')==='Demo page') { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <meta name='description' content='...'> inside <head>."
+      },
+      {
+        "level": 2,
+        "text": "Exact content must match."
+      },
+      {
+        "level": 3,
+        "text": "Place it after charset is fine."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Metadata Tags</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <meta name=\"description\" content=\"Demo page\">\n</head>\n<body>\n  \n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-018",
+    "title": "Favicon",
+    "description": "Link a favicon 'favicon.ico' using <link rel='icon'>.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Favicon</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <!-- favicon here -->\n</head>\n<body>\n  <!-- Add favicon link in head -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelector('link[rel=\"icon\"][href=\"favicon.ico\"]')!=null) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <link rel='icon' href='favicon.ico'> in <head>."
+      },
+      {
+        "level": 2,
+        "text": "Any position in head is fine."
+      },
+      {
+        "level": 3,
+        "text": "Ensure href matches exactly."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Favicon</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <link rel=\"icon\" href=\"favicon.ico\">\n</head>\n<body>\n  \n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-019",
+    "title": "Internal Anchors",
+    "description": "Create a link that jumps to a section with id='target'. Add the target section.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Internal Anchors</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add internal link and target -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('a[href=\"#target\"]')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (!!document.getElementById('target')) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use id on the target element and an <a href='#id'> link."
+      },
+      {
+        "level": 2,
+        "text": "Any element can have the id."
+      },
+      {
+        "level": 3,
+        "text": "See example in the solution."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Internal Anchors</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <a href=\"#target\">Go to target</a>\n<section id=\"target\">Target section</section>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-020",
+    "title": "mailto & tel Links",
+    "description": "Add a mail link to 'info@example.com' and a phone link '+123456'.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>mailto & tel Links</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add mailto and tel links -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('a[href=\"mailto:info@example.com\"]')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (!!document.querySelector('a[href=\"tel:+123456\"]')) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use href='mailto:...' and href='tel:...'."
+      },
+      {
+        "level": 2,
+        "text": "Text is flexible but links must match exactly."
+      },
+      {
+        "level": 3,
+        "text": "Add two <a> elements."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>mailto & tel Links</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <a href=\"mailto:info@example.com\">Email</a> <a href=\"tel:+123456\">Call</a>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-021",
+    "title": "Blockquote & Cite",
+    "description": "Add a blockquote with a cite attribute pointing to 'https://quotes.example'.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Blockquote & Cite</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add blockquote -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('blockquote[cite=\"https://quotes.example\"]')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <blockquote cite='...'>."
+      },
+      {
+        "level": 2,
+        "text": "Any quote text is okay."
+      },
+      {
+        "level": 3,
+        "text": "Ensure cite URL matches."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Blockquote & Cite</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <blockquote cite=\"https://quotes.example\">“Simplicity is prerequisite for reliability.”</blockquote>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-022",
+    "title": "Code & Pre",
+    "description": "Show inline code with <code> and a preformatted block with <pre>.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Code & Pre</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add code and pre -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('code')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (!!document.querySelector('pre')) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <code> for inline snippets and <pre> for blocks."
+      },
+      {
+        "level": 2,
+        "text": "You can escape angle brackets with &lt; &gt;."
+      },
+      {
+        "level": 3,
+        "text": "Add one of each."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Code & Pre</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <p>Use <code>&lt;section&gt;</code> for sections.</p>\n<pre>const x = 1;\nconsole.log(x)</pre>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-023",
+    "title": "HTML Entities",
+    "description": "Display the characters < and > using entities in a paragraph.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>HTML Entities</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add paragraph showing entities -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelector('p')?.innerHTML.includes('&lt;') && document.querySelector('p')?.innerHTML.includes('&gt;')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use &lt; and &gt; entities."
+      },
+      {
+        "level": 2,
+        "text": "Place them inside a <p>."
+      },
+      {
+        "level": 3,
+        "text": "Example provided."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>HTML Entities</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <p>Use &lt;em&gt; to emphasize &gt; text.</p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-024",
+    "title": "HTML Comments",
+    "description": "Add an HTML comment containing the word TODO.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>HTML Comments</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add comment with TODO -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.documentElement.innerHTML.includes('<!--') && document.documentElement.innerHTML.includes('TODO')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "HTML comments look like <!-- ... -->."
+      },
+      {
+        "level": 2,
+        "text": "Include the word TODO."
+      },
+      {
+        "level": 3,
+        "text": "Place it anywhere in the body."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>HTML Comments</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- TODO: fill later -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-025",
+    "title": "Navigation List",
+    "description": "Create a nav containing an unordered list with three links.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Navigation List</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add nav with list -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('nav ul')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (document.querySelectorAll('nav ul li a').length===3) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Wrap the list inside <nav>."
+      },
+      {
+        "level": 2,
+        "text": "Add three <a> elements."
+      },
+      {
+        "level": 3,
+        "text": "Follow the structure nav > ul > li > a"
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Navigation List</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <nav><ul><li><a href=\"#\">A</a></li><li><a href=\"#\">B</a></li><li><a href=\"#\">C</a></li></ul></nav>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-026",
+    "title": "Footer Smallprint",
+    "description": "Add a footer with a small element containing '© 2025'.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Footer Smallprint</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add footer smallprint -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelector('footer small')?.textContent.includes('© 2025')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <footer> with nested <small>."
+      },
+      {
+        "level": 2,
+        "text": "Include the © symbol and year."
+      },
+      {
+        "level": 3,
+        "text": "Place the text exactly as in the example."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Footer Smallprint</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <footer><small>© 2025</small></footer>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-027",
+    "title": "Article & Section",
+    "description": "Create an article containing a section with a heading.",
+    "difficulty": 2,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Article & Section</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add article with section -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('article section h2')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Nest <section> inside <article>."
+      },
+      {
+        "level": 2,
+        "text": "Add a heading inside the section."
+      },
+      {
+        "level": 3,
+        "text": "h2 is fine for the section heading."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Article & Section</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <article><section><h2>About</h2><p>Text</p></section></article>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-028",
+    "title": "Address Element",
+    "description": "Use the <address> element to show a contact email link.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Address Element</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add address with email -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('address a[href^=\"mailto:\"]')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <address> for contact information."
+      },
+      {
+        "level": 2,
+        "text": "Include a mailto link."
+      },
+      {
+        "level": 3,
+        "text": "Follow the example."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Address Element</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <address>Contact: <a href=\"mailto:support@example.com\">support@example.com</a></address>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-029",
+    "title": "Abbreviation",
+    "description": "Use <abbr> for the term 'HTML' with title='HyperText Markup Language'.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Abbreviation</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add abbr -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelector('abbr[title=\"HyperText Markup Language\"]')?.textContent.trim()==='HTML') { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Add the title attribute explaining the abbreviation."
+      },
+      {
+        "level": 2,
+        "text": "Text content should be HTML."
+      },
+      {
+        "level": 3,
+        "text": "See example."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Abbreviation</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <p><abbr title=\"HyperText Markup Language\">HTML</abbr> is the standard.</p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-030",
+    "title": "Time Element",
+    "description": "Display 'March 1, 2025' using <time datetime='2025-03-01'>.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Time Element</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add time element -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelector('time[datetime=\"2025-03-01\"]')?.textContent.includes('March') || document.querySelector('time[datetime=\"2025-03-01\"]')?.textContent.includes('2025')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <time> with a machine-readable datetime."
+      },
+      {
+        "level": 2,
+        "text": "Human text can say March 1, 2025."
+      },
+      {
+        "level": 3,
+        "text": "Put it inside a paragraph."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Time Element</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <p>Event: <time datetime=\"2025-03-01\">March 1, 2025</time></p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-031",
+    "title": "Details & Summary",
+    "description": "Create a collapsible details widget with summary 'More info'.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Details & Summary</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add details -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelector('details summary')?.textContent.trim()==='More info') { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <details> with a <summary>."
+      },
+      {
+        "level": 2,
+        "text": "Text must match 'More info'."
+      },
+      {
+        "level": 3,
+        "text": "Any content inside is fine."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Details & Summary</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <details><summary>More info</summary><p>Hidden text</p></details>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-032",
+    "title": "Progress",
+    "description": "Add a progress bar with value 30 of max 100.",
+    "difficulty": 2,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Progress</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add progress -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelector('progress[value=\"30\"][max=\"100\"]')!=null) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <progress value='..' max='..'>."
+      },
+      {
+        "level": 2,
+        "text": "Values must be 30 and 100."
+      },
+      {
+        "level": 3,
+        "text": "Include text 30% if you like."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Progress</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <progress value=\"30\" max=\"100\">30%</progress>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-033",
+    "title": "Meter",
+    "description": "Add a meter with value 0.7 between 0 and 1.",
+    "difficulty": 2,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Meter</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add meter -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelector('meter[value=\"0.7\"][min=\"0\"][max=\"1\"]')!=null) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <meter> with min, max and value."
+      },
+      {
+        "level": 2,
+        "text": "Use 0, 1, and 0.7."
+      },
+      {
+        "level": 3,
+        "text": "Any text is fine."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Meter</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <meter min=\"0\" max=\"1\" value=\"0.7\">70%</meter>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-034",
+    "title": "Accessible Iframe",
+    "description": "Embed an iframe to 'about:blank' with a title 'preview'.",
+    "difficulty": 2,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Accessible Iframe</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add iframe -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelector('iframe[title=\"preview\"][src=\"about:blank\"]')!=null) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Always add a title to iframes."
+      },
+      {
+        "level": 2,
+        "text": "Use about:blank for the src."
+      },
+      {
+        "level": 3,
+        "text": "Copy the example."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Accessible Iframe</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <iframe src=\"about:blank\" title=\"preview\"></iframe>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-035",
+    "title": "ARIA Label",
+    "description": "Add a search input with aria-label='Search site'.",
+    "difficulty": 2,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>ARIA Label</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add aria-labeled input -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelector('input[type=\"search\"][aria-label=\"Search site\"]')!=null) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use type='search' and aria-label."
+      },
+      {
+        "level": 2,
+        "text": "Text must match exactly."
+      },
+      {
+        "level": 3,
+        "text": "Place the input in body."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>ARIA Label</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <input type=\"search\" aria-label=\"Search site\">\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-036",
+    "title": "Data Attributes",
+    "description": "Add a div with data-role='card' and text 'Card'.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Data Attributes</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add data-role card -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.querySelector('div[data-role=\"card\"]')?.textContent.trim()==='Card') { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use a data-* attribute."
+      },
+      {
+        "level": 2,
+        "text": "Value must be 'card'."
+      },
+      {
+        "level": 3,
+        "text": "Text content 'Card'."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Data Attributes</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <div data-role=\"card\">Card</div>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-037",
+    "title": "IDs & Classes",
+    "description": "Create a div with id='box' and class='panel'.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>IDs & Classes</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add id and class -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.getElementById('box')!=null) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (document.querySelector('#box.panel')!=null) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use id and class attributes."
+      },
+      {
+        "level": 2,
+        "text": "Selectability matters: #box.panel should match."
+      },
+      {
+        "level": 3,
+        "text": "Copy the example."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>IDs & Classes</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <div id=\"box\" class=\"panel\">Content</div>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-038",
+    "title": "Strong & Emphasis",
+    "description": "Create a sentence with both <strong> and <em>.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Strong & Emphasis</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add strong + em -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('strong') && !!document.querySelector('em')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Wrap words in <strong> and <em>."
+      },
+      {
+        "level": 2,
+        "text": "Place them inside a sentence."
+      },
+      {
+        "level": 3,
+        "text": "See solution."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Strong & Emphasis</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <p>This is <strong>important</strong> and <em>emphasized</em>.</p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-039",
+    "title": "Superscript & Subscript",
+    "description": "Show H2O with the 2 as subscript and 10^2 with 2 as superscript.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Superscript & Subscript</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add sub and sup -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (document.body.innerHTML.includes('H<sub>2</sub>O')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (document.body.innerHTML.includes('10<sup>2</sup>')) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <sub> and <sup> around the numbers."
+      },
+      {
+        "level": 2,
+        "text": "Include both examples."
+      },
+      {
+        "level": 3,
+        "text": "Follow solution markup."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Superscript & Subscript</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <p>Chemistry: H<sub>2</sub>O</p><p>Math: 10<sup>2</sup></p>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "html-040",
+    "title": "Small & Mark",
+    "description": "Add a sentence using <mark> to highlight a word and <small> for fine print.",
+    "difficulty": 1,
+    "category": "html",
+    "scaffold": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Small & Mark</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <!-- Add mark and small -->\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+      "style.css": "/* You can add styles here */\n",
+      "script.js": "// No JS required for this HTML challenge\n"
+    },
+    "tests": [
+      {
+        "id": "t1",
+        "description": "DOM assertions",
+        "type": "dom",
+        "code": "const passed = []; const failed = [];\ntry {\n  if (!!document.querySelector('mark')) { passed.push(\"a01\"); }\n  else { failed.push(\"a01\"); }\n} catch (e) { failed.push(\"a01\"); }\n\ntry {\n  if (!!document.querySelector('small')) { passed.push(\"a02\"); }\n  else { failed.push(\"a02\"); }\n} catch (e) { failed.push(\"a02\"); }\n\nreturn { passedIds: passed, failedIds: failed, passed: failed.length === 0 };"
+      }
+    ],
+    "hints": [
+      {
+        "level": 1,
+        "text": "Use <mark> to highlight and <small> for fine print."
+      },
+      {
+        "level": 2,
+        "text": "Include both elements in the document."
+      },
+      {
+        "level": 3,
+        "text": "See example."
+      }
+    ],
+    "solutions": [
+      {
+        "id": "minimal",
+        "files": {
+          "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Small & Mark</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <p>Remember to <mark>save</mark> often.</p><small>Terms apply.</small>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "style.css": "/* Styles optional for solution */\n",
+          "script.js": "// Not used\n"
+        }
+      }
+    ]
+  }
+]
