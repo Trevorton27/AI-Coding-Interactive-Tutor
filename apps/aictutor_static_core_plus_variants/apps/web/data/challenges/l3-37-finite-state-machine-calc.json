@@ -1,0 +1,46 @@
+{
+  "level": 3,
+  "slug": "l3-37-finite-state-machine-calc",
+  "title": "finite state machine (calc)",
+  "objective": "JavaScript: finite state machine (calc)",
+  "passCriteria": "Function(s) pass unit checks.",
+  "starter": {
+    "js": "// expose your solution as window.solution = function(...) { };\n(window as any).solution = function(){ /* TODO */ };"
+  },
+  "tests": [
+    {
+      "id": "exists",
+      "type": "js-eval",
+      "code": "(function(){ return typeof (window as any).solution==='function'; })()"
+    }
+  ],
+  "tags": [
+    "js"
+  ],
+  "solutions": [
+    {
+      "label": "Minimal solution",
+      "files": {
+        "html": "<!doctype html>\n<html lang=\"ja\">\n<head><meta charset=\"utf-8\"><title>Challenge</title></head>\n<body>\n  <!-- TODO -->\n</body></html>",
+        "css": "",
+        "js": "// expose your solution as window.solution = function(...) { };\n(window as any).solution = function(){ /* TODO */ };"
+      },
+      "notes": "One of several correct answers."
+    }
+  ],
+  "hints": [
+    {
+      "level": 1,
+      "text": "まず、要素やAPIの『名前』に注目して、足りないものを洗い出しましょう。"
+    },
+    {
+      "level": 2,
+      "text": "合否条件を満たすための最小構成を列挙してから、1つずつ追加しましょう。"
+    },
+    {
+      "level": 3,
+      "text": "具体的なタグ名/メソッド名を確認して、対応する属性や引数を補ってください。"
+    }
+  ],
+  "paramsSchema": {}
+}

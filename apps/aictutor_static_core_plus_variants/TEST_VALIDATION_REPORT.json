@@ -1,0 +1,888 @@
+{
+  "total": 120,
+  "passed": 60,
+  "failed": 60,
+  "noSolution": 0,
+  "byCategory": {
+    "HTML Basics": {
+      "total": 15,
+      "passed": 15,
+      "failed": 0,
+      "noSolution": 0
+    },
+    "CSS & Layout": {
+      "total": 15,
+      "passed": 15,
+      "failed": 0,
+      "noSolution": 0
+    },
+    "JS DOM": {
+      "total": 15,
+      "passed": 0,
+      "failed": 15,
+      "noSolution": 0
+    },
+    "Async & Modules": {
+      "total": 15,
+      "passed": 15,
+      "failed": 0,
+      "noSolution": 0
+    },
+    "Algorithms": {
+      "total": 15,
+      "passed": 15,
+      "failed": 0,
+      "noSolution": 0
+    },
+    "React Basics": {
+      "total": 15,
+      "passed": 0,
+      "failed": 15,
+      "noSolution": 0
+    },
+    "React Hooks": {
+      "total": 15,
+      "passed": 0,
+      "failed": 15,
+      "noSolution": 0
+    },
+    "React Capstone": {
+      "total": 15,
+      "passed": 0,
+      "failed": 15,
+      "noSolution": 0
+    }
+  },
+  "failures": [
+    {
+      "id": "l3-js-dom-1",
+      "category": "JS DOM",
+      "title": "L3 JS DOM #1",
+      "failedTests": [
+        "set"
+      ],
+      "messages": {
+        "set": "Set"
+      },
+      "errors": {}
+    },
+    {
+      "id": "l3-js-dom-2",
+      "category": "JS DOM",
+      "title": "L3 JS DOM #2",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:109)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:163)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l3-js-dom-3",
+      "category": "JS DOM",
+      "title": "L3 JS DOM #3",
+      "failedTests": [
+        "toggle"
+      ],
+      "messages": {
+        "toggle": "Error: Cannot read properties of null (reading 'click')"
+      },
+      "errors": {
+        "toggle": "TypeError: Cannot read properties of null (reading 'click')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:55)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:77)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l3-js-dom-4",
+      "category": "JS DOM",
+      "title": "L3 JS DOM #4",
+      "failedTests": [
+        "set"
+      ],
+      "messages": {
+        "set": "Set"
+      },
+      "errors": {}
+    },
+    {
+      "id": "l3-js-dom-5",
+      "category": "JS DOM",
+      "title": "L3 JS DOM #5",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:109)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:163)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l3-js-dom-6",
+      "category": "JS DOM",
+      "title": "L3 JS DOM #6",
+      "failedTests": [
+        "toggle"
+      ],
+      "messages": {
+        "toggle": "Error: Cannot read properties of null (reading 'click')"
+      },
+      "errors": {
+        "toggle": "TypeError: Cannot read properties of null (reading 'click')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:55)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:77)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l3-js-dom-7",
+      "category": "JS DOM",
+      "title": "L3 JS DOM #7",
+      "failedTests": [
+        "set"
+      ],
+      "messages": {
+        "set": "Set"
+      },
+      "errors": {}
+    },
+    {
+      "id": "l3-js-dom-8",
+      "category": "JS DOM",
+      "title": "L3 JS DOM #8",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:109)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:163)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l3-js-dom-9",
+      "category": "JS DOM",
+      "title": "L3 JS DOM #9",
+      "failedTests": [
+        "toggle"
+      ],
+      "messages": {
+        "toggle": "Error: Cannot read properties of null (reading 'click')"
+      },
+      "errors": {
+        "toggle": "TypeError: Cannot read properties of null (reading 'click')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:55)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:77)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l3-js-dom-10",
+      "category": "JS DOM",
+      "title": "L3 JS DOM #10",
+      "failedTests": [
+        "set"
+      ],
+      "messages": {
+        "set": "Set"
+      },
+      "errors": {}
+    },
+    {
+      "id": "l3-js-dom-11",
+      "category": "JS DOM",
+      "title": "L3 JS DOM #11",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:109)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:163)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l3-js-dom-12",
+      "category": "JS DOM",
+      "title": "L3 JS DOM #12",
+      "failedTests": [
+        "toggle"
+      ],
+      "messages": {
+        "toggle": "Error: Cannot read properties of null (reading 'click')"
+      },
+      "errors": {
+        "toggle": "TypeError: Cannot read properties of null (reading 'click')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:55)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:77)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l3-js-dom-13",
+      "category": "JS DOM",
+      "title": "L3 JS DOM #13",
+      "failedTests": [
+        "set"
+      ],
+      "messages": {
+        "set": "Set"
+      },
+      "errors": {}
+    },
+    {
+      "id": "l3-js-dom-14",
+      "category": "JS DOM",
+      "title": "L3 JS DOM #14",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:109)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:163)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l3-js-dom-15",
+      "category": "JS DOM",
+      "title": "L3 JS DOM #15",
+      "failedTests": [
+        "toggle"
+      ],
+      "messages": {
+        "toggle": "Error: Cannot read properties of null (reading 'click')"
+      },
+      "errors": {
+        "toggle": "TypeError: Cannot read properties of null (reading 'click')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:55)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:77)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l6-react-basics-1",
+      "category": "React Basics",
+      "title": "L6 React Basics #1",
+      "failedTests": [
+        "hello"
+      ],
+      "messages": {
+        "hello": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "hello": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:39)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l6-react-basics-2",
+      "category": "React Basics",
+      "title": "L6 React Basics #2",
+      "failedTests": [
+        "hello"
+      ],
+      "messages": {
+        "hello": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "hello": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:39)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l6-react-basics-3",
+      "category": "React Basics",
+      "title": "L6 React Basics #3",
+      "failedTests": [
+        "hello"
+      ],
+      "messages": {
+        "hello": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "hello": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:39)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l6-react-basics-4",
+      "category": "React Basics",
+      "title": "L6 React Basics #4",
+      "failedTests": [
+        "hello"
+      ],
+      "messages": {
+        "hello": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "hello": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:39)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l6-react-basics-5",
+      "category": "React Basics",
+      "title": "L6 React Basics #5",
+      "failedTests": [
+        "hello"
+      ],
+      "messages": {
+        "hello": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "hello": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:39)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l6-react-basics-6",
+      "category": "React Basics",
+      "title": "L6 React Basics #6",
+      "failedTests": [
+        "hello"
+      ],
+      "messages": {
+        "hello": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "hello": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:39)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l6-react-basics-7",
+      "category": "React Basics",
+      "title": "L6 React Basics #7",
+      "failedTests": [
+        "hello"
+      ],
+      "messages": {
+        "hello": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "hello": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:39)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l6-react-basics-8",
+      "category": "React Basics",
+      "title": "L6 React Basics #8",
+      "failedTests": [
+        "hello"
+      ],
+      "messages": {
+        "hello": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "hello": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:39)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l6-react-basics-9",
+      "category": "React Basics",
+      "title": "L6 React Basics #9",
+      "failedTests": [
+        "hello"
+      ],
+      "messages": {
+        "hello": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "hello": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:39)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l6-react-basics-10",
+      "category": "React Basics",
+      "title": "L6 React Basics #10",
+      "failedTests": [
+        "hello"
+      ],
+      "messages": {
+        "hello": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "hello": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:39)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l6-react-basics-11",
+      "category": "React Basics",
+      "title": "L6 React Basics #11",
+      "failedTests": [
+        "hello"
+      ],
+      "messages": {
+        "hello": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "hello": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:39)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l6-react-basics-12",
+      "category": "React Basics",
+      "title": "L6 React Basics #12",
+      "failedTests": [
+        "hello"
+      ],
+      "messages": {
+        "hello": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "hello": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:39)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l6-react-basics-13",
+      "category": "React Basics",
+      "title": "L6 React Basics #13",
+      "failedTests": [
+        "hello"
+      ],
+      "messages": {
+        "hello": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "hello": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:39)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l6-react-basics-14",
+      "category": "React Basics",
+      "title": "L6 React Basics #14",
+      "failedTests": [
+        "hello"
+      ],
+      "messages": {
+        "hello": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "hello": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:39)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l6-react-basics-15",
+      "category": "React Basics",
+      "title": "L6 React Basics #15",
+      "failedTests": [
+        "hello"
+      ],
+      "messages": {
+        "hello": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "hello": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:39)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l7-react-hooks-1",
+      "category": "React Hooks",
+      "title": "L7 React Hooks #1",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:123)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:184)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l7-react-hooks-2",
+      "category": "React Hooks",
+      "title": "L7 React Hooks #2",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:123)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:184)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l7-react-hooks-3",
+      "category": "React Hooks",
+      "title": "L7 React Hooks #3",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:123)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:184)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l7-react-hooks-4",
+      "category": "React Hooks",
+      "title": "L7 React Hooks #4",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:123)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:184)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l7-react-hooks-5",
+      "category": "React Hooks",
+      "title": "L7 React Hooks #5",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:123)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:184)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l7-react-hooks-6",
+      "category": "React Hooks",
+      "title": "L7 React Hooks #6",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:123)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:184)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l7-react-hooks-7",
+      "category": "React Hooks",
+      "title": "L7 React Hooks #7",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:123)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:184)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l7-react-hooks-8",
+      "category": "React Hooks",
+      "title": "L7 React Hooks #8",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:123)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:184)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l7-react-hooks-9",
+      "category": "React Hooks",
+      "title": "L7 React Hooks #9",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:123)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:184)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l7-react-hooks-10",
+      "category": "React Hooks",
+      "title": "L7 React Hooks #10",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:123)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:184)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l7-react-hooks-11",
+      "category": "React Hooks",
+      "title": "L7 React Hooks #11",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:123)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:184)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l7-react-hooks-12",
+      "category": "React Hooks",
+      "title": "L7 React Hooks #12",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:123)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:184)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l7-react-hooks-13",
+      "category": "React Hooks",
+      "title": "L7 React Hooks #13",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:123)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:184)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l7-react-hooks-14",
+      "category": "React Hooks",
+      "title": "L7 React Hooks #14",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:123)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:184)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l7-react-hooks-15",
+      "category": "React Hooks",
+      "title": "L7 React Hooks #15",
+      "failedTests": [
+        "inc"
+      ],
+      "messages": {
+        "inc": "Error: Cannot read properties of null (reading 'textContent')"
+      },
+      "errors": {
+        "inc": "TypeError: Cannot read properties of null (reading 'textContent')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:123)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:184)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l8-react-capstone-1",
+      "category": "React Capstone",
+      "title": "L8 React Capstone #1",
+      "failedTests": [
+        "add"
+      ],
+      "messages": {
+        "add": "Error: Cannot set properties of null (setting 'value')"
+      },
+      "errors": {
+        "add": "TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:59)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:214)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l8-react-capstone-2",
+      "category": "React Capstone",
+      "title": "L8 React Capstone #2",
+      "failedTests": [
+        "add"
+      ],
+      "messages": {
+        "add": "Error: Cannot set properties of null (setting 'value')"
+      },
+      "errors": {
+        "add": "TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:59)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:214)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l8-react-capstone-3",
+      "category": "React Capstone",
+      "title": "L8 React Capstone #3",
+      "failedTests": [
+        "add"
+      ],
+      "messages": {
+        "add": "Error: Cannot set properties of null (setting 'value')"
+      },
+      "errors": {
+        "add": "TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:59)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:214)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l8-react-capstone-4",
+      "category": "React Capstone",
+      "title": "L8 React Capstone #4",
+      "failedTests": [
+        "add"
+      ],
+      "messages": {
+        "add": "Error: Cannot set properties of null (setting 'value')"
+      },
+      "errors": {
+        "add": "TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:59)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:214)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l8-react-capstone-5",
+      "category": "React Capstone",
+      "title": "L8 React Capstone #5",
+      "failedTests": [
+        "add"
+      ],
+      "messages": {
+        "add": "Error: Cannot set properties of null (setting 'value')"
+      },
+      "errors": {
+        "add": "TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:59)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:214)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l8-react-capstone-6",
+      "category": "React Capstone",
+      "title": "L8 React Capstone #6",
+      "failedTests": [
+        "add"
+      ],
+      "messages": {
+        "add": "Error: Cannot set properties of null (setting 'value')"
+      },
+      "errors": {
+        "add": "TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:59)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:214)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l8-react-capstone-7",
+      "category": "React Capstone",
+      "title": "L8 React Capstone #7",
+      "failedTests": [
+        "add"
+      ],
+      "messages": {
+        "add": "Error: Cannot set properties of null (setting 'value')"
+      },
+      "errors": {
+        "add": "TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:59)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:214)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l8-react-capstone-8",
+      "category": "React Capstone",
+      "title": "L8 React Capstone #8",
+      "failedTests": [
+        "add"
+      ],
+      "messages": {
+        "add": "Error: Cannot set properties of null (setting 'value')"
+      },
+      "errors": {
+        "add": "TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:59)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:214)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l8-react-capstone-9",
+      "category": "React Capstone",
+      "title": "L8 React Capstone #9",
+      "failedTests": [
+        "add"
+      ],
+      "messages": {
+        "add": "Error: Cannot set properties of null (setting 'value')"
+      },
+      "errors": {
+        "add": "TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:59)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:214)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l8-react-capstone-10",
+      "category": "React Capstone",
+      "title": "L8 React Capstone #10",
+      "failedTests": [
+        "add"
+      ],
+      "messages": {
+        "add": "Error: Cannot set properties of null (setting 'value')"
+      },
+      "errors": {
+        "add": "TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:59)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:214)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l8-react-capstone-11",
+      "category": "React Capstone",
+      "title": "L8 React Capstone #11",
+      "failedTests": [
+        "add"
+      ],
+      "messages": {
+        "add": "Error: Cannot set properties of null (setting 'value')"
+      },
+      "errors": {
+        "add": "TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:59)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:214)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l8-react-capstone-12",
+      "category": "React Capstone",
+      "title": "L8 React Capstone #12",
+      "failedTests": [
+        "add"
+      ],
+      "messages": {
+        "add": "Error: Cannot set properties of null (setting 'value')"
+      },
+      "errors": {
+        "add": "TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:59)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:214)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l8-react-capstone-13",
+      "category": "React Capstone",
+      "title": "L8 React Capstone #13",
+      "failedTests": [
+        "add"
+      ],
+      "messages": {
+        "add": "Error: Cannot set properties of null (setting 'value')"
+      },
+      "errors": {
+        "add": "TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:59)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:214)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l8-react-capstone-14",
+      "category": "React Capstone",
+      "title": "L8 React Capstone #14",
+      "failedTests": [
+        "add"
+      ],
+      "messages": {
+        "add": "Error: Cannot set properties of null (setting 'value')"
+      },
+      "errors": {
+        "add": "TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:59)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:214)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    },
+    {
+      "id": "l8-react-capstone-15",
+      "category": "React Capstone",
+      "title": "L8 React Capstone #15",
+      "failedTests": [
+        "add"
+      ],
+      "messages": {
+        "add": "Error: Cannot set properties of null (setting 'value')"
+      },
+      "errors": {
+        "add": "TypeError: Cannot set properties of null (setting 'value')\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:59)\n    at eval (eval at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:99:22), <anonymous>:3:214)\n    at runTests (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:100:22)\n    at async validateAll (/home/trey27/Documents/projects/aict/scripts/validate-all-solutions.js:166:23)"
+      }
+    }
+  ]
+}

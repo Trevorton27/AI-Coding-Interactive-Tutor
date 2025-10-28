@@ -32,7 +32,7 @@ echo "NOTE: ensure apps/web/.env.local contains:
 ANTHROPIC_API_KEY=...
 DATABASE_URL=...
 TUTOR_SERVICE_TOKENS=supersecret_lms_token_1,supersecret_lms_token_2
-MODEL_FAST=claude-3-haiku-20240307
+MODEL_FAST=claude-haiku-4-5
 MODEL_SMART=claude-3-5-sonnet-202410
 # optional
 RUNNER_URL=http://runner:8080
@@ -95,7 +95,7 @@ EOF
 write apps/web/app/lib/router.ts <<'EOF'
 // apps/web/app/lib/router.ts
 export function chooseModel(task: "small" | "code" | "grading" | "quiz"): string {
-  const fast = process.env.MODEL_FAST || "claude-3-haiku-20240307";
+  const fast = process.env.MODEL_FAST || "claude-haiku-4-5";
   const smart = process.env.MODEL_SMART || "claude-3-5-sonnet-202410";
   switch (task) {
     case "small": return fast;
