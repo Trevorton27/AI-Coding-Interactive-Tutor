@@ -5,6 +5,11 @@
 http://localhost:3000/api
 ```
 
+## Related Documentation
+
+- [Database Configuration Guide](./DATABASE_CONFIG.md) - Complete guide to database setup, schema, and integration patterns
+- [Prisma Schema](/packages/database/prisma/schema.prisma) - Full database schema definition
+
 ---
 
 ## Endpoints
@@ -128,23 +133,34 @@ Get student progress.
 
 ### GET /api/tasks
 
-List all tasks.
+List all tasks (loads from local files or database based on `TASKS_SOURCE` env var).
 
 **Query Params:**
-- `difficulty` (optional): 1-5
-- `conceptId` (optional): Filter by concept
+- `difficulty` or `level` (optional): Filter by difficulty level 1-5 (both parameters work the same)
+- `limit` (optional): Number of items to return (default: 15)
+- `offset` (optional): Number of items to skip for pagination (default: 0)
+
+**Examples:**
+```
+GET /api/tasks?difficulty=1
+GET /api/tasks?level=2&limit=10
+GET /api/tasks?difficulty=3&limit=5&offset=10
+```
 
 **Response:**
 ```json
 {
-  "tasks": [
+  "items": [
     {
-      "id": "html-basics-1",
+      "id": "l1-1-headings-101",
       "title": "Create Your First Webpage",
       "difficulty": 1,
-      "conceptIds": ["concept_123"]
+      "scaffold": {...},
+      "tests": [...],
+      "hints": [...]
     }
-  ]
+  ],
+  "total": 120
 }
 ```
 

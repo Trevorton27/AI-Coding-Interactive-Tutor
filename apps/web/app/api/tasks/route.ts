@@ -146,7 +146,8 @@ async function loadDb(level?: number) {
 export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(req.url);
-    const levelParam = searchParams.get("level");
+    // Accept both 'level' and 'difficulty' parameters (they mean the same thing)
+    const levelParam = searchParams.get("level") || searchParams.get("difficulty");
     const level = levelParam ? parseInt(levelParam) : undefined;
     const limit = parseInt(searchParams.get("limit") || "15");
     const offset = parseInt(searchParams.get("offset") || "0");
@@ -158,6 +159,7 @@ export async function GET(req: Request) {
     const items = rows.slice(offset, offset + limit);
     return NextResponse.json({ items, total: rows.length });
   } catch (err: any) {
+    console.error("GET /api/tasks error:", err);
     return NextResponse.json(
       { error: err?.message || String(err) },
       { status: 500 }
